@@ -6,6 +6,9 @@
   "homepage": "https://github.com/tcavenezuela/fsuipc.js/tree/main/packages/core#readme",
   "license": "MIT",
   "main": "lib/core.js",
+  "publishConfig": {
+    "access": "public"
+  },
   "directories": {
     "lib": "lib",
     "test": "__tests__"

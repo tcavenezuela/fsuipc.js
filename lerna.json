@@ -5,7 +5,7 @@
   "command": {
     "publish": {
       "message": "chore(release): publish",
-      "registry": "https://registry.npmjs.com"
+      "registry": "https://registry.npmjs.org"
     }
   }
 }
