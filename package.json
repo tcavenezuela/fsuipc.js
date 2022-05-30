@@ -1,0 +1,24 @@
+{
+  "name": "fsuipc.js-monorepo",
+  "private": "true",
+  "version": "0.0.0",
+  "description": "",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "devDependencies": {
+    "@types/node": "^17.0.36",
+    "lerna": "^5.0.0",
+    "typescript": "^4.7.2"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tcavenezuela/fsuipc.js.git"
+  },
+  "author": "Carlos Villalobos",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/tcavenezuela/fsuipc.js/issues"
+  },
+  "homepage": "https://github.com/tcavenezuela/fsuipc.js#readme"
+}

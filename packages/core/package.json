@@ -1,0 +1,30 @@
+{
+  "name": "fsuipc.js",
+  "version": "0.0.0",
+  "description": "",
+  "author": "Carlos Villalobos",
+  "homepage": "https://github.com/tcavenezuela/fsuipc.js/tree/main/packages/core#readme",
+  "license": "MIT",
+  "main": "lib/core.js",
+  "directories": {
+    "lib": "lib",
+    "test": "__tests__"
+  },
+  "files": [
+    "lib"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tcavenezuela/fsuipc.js.git"
+  },
+  "scripts": {
+    "tsc": "tsc",
+    "test": "echo \"Error: run tests from root\" && exit 1"
+  },
+  "bugs": {
+    "url": "https://github.com/tcavenezuela/fsuipc.js/issues"
+  },
+  "dependencies": {
+    "@fsuipc.js/api": "^0.0.0"
+  }
+}
