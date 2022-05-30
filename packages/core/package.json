@@ -23,8 +23,5 @@
   },
   "bugs": {
     "url": "https://github.com/tcavenezuela/fsuipc.js/issues"
-  },
-  "dependencies": {
-    "@fsuipc.js/api": "^0.0.0"
   }
 }
