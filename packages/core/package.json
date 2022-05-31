@@ -22,9 +22,18 @@
   },
   "scripts": {
     "tsc": "tsc",
-    "test": "echo \"Error: run tests from root\" && exit 1"
+    "build": "node-gyp build",
+    "install": "node-gyp rebuild",
+    "configure": "node-gyp configure"
   },
   "bugs": {
     "url": "https://github.com/tcavenezuela/fsuipc.js/issues"
+  },
+  "dependencies": {
+    "bindings": "^1.5.0",
+    "nan": "^2.16.0"
+  },
+  "devDependencies": {
+    "ts-node": "^10.8.0"
   }
 }

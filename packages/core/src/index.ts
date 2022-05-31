@@ -1,1 +1,3 @@
-console.log('CORE PACKAGE');
+const fsuipc = require('bindings')('fsuipc.node');
+
+module.exports = fsuipc;
