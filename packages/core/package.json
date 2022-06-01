@@ -5,13 +5,13 @@
   "author": "Carlos Villalobos",
   "homepage": "https://github.com/tcavenezuela/fsuipc.js/tree/master/packages/core#readme",
   "license": "MIT",
-  "main": "lib/core.js",
+  "main": "lib/index.js",
+  "types": "lib/index.d.ts",
   "publishConfig": {
     "access": "public"
   },
   "directories": {
-    "lib": "lib",
-    "test": "__tests__"
+    "lib": "lib"
   },
   "files": [
     "lib"
@@ -21,10 +21,12 @@
     "url": "git+https://github.com/tcavenezuela/fsuipc.js.git"
   },
   "scripts": {
-    "tsc": "tsc",
-    "build": "node-gyp build",
-    "install": "node-gyp rebuild",
-    "configure": "node-gyp configure"
+    "test": "ts-node src/test.ts",
+    "build": "tsc && yarn run postbuild",
+    "postbuild": "copyfiles -u 1 \"src/*.d.ts\" lib",
+    "native-build": "node-gyp build",
+    "native-install": "node-gyp rebuild",
+    "native-configure": "node-gyp configure"
   },
   "bugs": {
     "url": "https://github.com/tcavenezuela/fsuipc.js/issues"
@@ -34,6 +36,8 @@
     "nan": "^2.16.0"
   },
   "devDependencies": {
-    "ts-node": "^10.8.0"
+    "copyfiles": "^2.4.1",
+    "ts-node": "^10.8.0",
+    "typescript": "^4.7.2"
   }
 }
