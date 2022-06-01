@@ -1,19 +1,22 @@
-const fsuipcModule = require('bindings')('fsuipc.node');
+import { FSUIPC, Type } from 'fsuipc.js';
 
-const sim = new fsuipcModule.FSUIPC();
+const simulator = new FSUIPC();
 
-sim.open()
-.then((obj: { add: (name: string, value: number, type: any) => any; process: () => any; }) => {
-  console.log(obj.add('clockHour', 0x238, fsuipcModule.Type.Byte));
-  return obj.process();
-})
-.then((result: any) => {
-  console.log("result:", JSON.stringify(result));
+simulator.open()
+    .then((obj) => {
+      console.log(obj.add('clockHour', 0x238, Type.Byte));
+      console.log(obj.add('aircraftType', 0x3D00, Type.String, 256));
+      console.log(obj.add('lights', 0x0D0C, Type.BitArray, 2));
 
-  return sim.close();
-})
-.catch((err) => {
-  console.error("error:", err);
+      return simulator.process();
+    })
+    .then((result) => {
+      console.log(JSON.stringify(result));
 
-  return sim.close();
-});
+      return simulator.close();
+    })
+    .catch((err) => {
+      console.error(err);
+      
+      return simulator.close();
+    });
