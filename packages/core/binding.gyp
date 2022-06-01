@@ -3,12 +3,12 @@
     {
       "target_name": "fsuipc",
       "sources": [
-        "src/index.cc",
-        "src/FSUIPC.cc",
-        "src/IPCUser.cc"
+        "src/native/index.cc",
+        "src/native/FSUIPC.cc",
+        "src/native/IPCUser.cc"
       ],
       "include_dirs": [
-        "src",
+        "src/native",
         "<!(node -e \"require('nan')\")"
       ]
     }
