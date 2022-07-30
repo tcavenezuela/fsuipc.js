@@ -21,5 +21,8 @@
   "bugs": {
     "url": "https://github.com/tcavenezuela/fsuipc.js/issues"
   },
-  "homepage": "https://github.com/tcavenezuela/fsuipc.js#readme"
+  "homepage": "https://github.com/tcavenezuela/fsuipc.js#readme",
+  "dependencies": {
+    "@changesets/cli": "^2.23.1"
+  }
 }
