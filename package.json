@@ -6,7 +6,8 @@
   "scripts": {
     "changeset": "changeset",
     "version-packages": "changeset version",
-    "release": "lerna run build && changeset publish"
+    "build": "lerna run build",
+    "release": "yarn run build && changeset publish"
   },
   "devDependencies": {
     "@types/node": "^17.0.36",
