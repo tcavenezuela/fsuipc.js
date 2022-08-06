@@ -18,7 +18,7 @@
     "type": "git",
     "url": "git+https://github.com/tcavenezuela/fsuipc.js.git"
   },
-  "author": "Carlos Villalobos",
+  "author": "Carlos Villalobos <carliyipxd@gmail.com>",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/tcavenezuela/fsuipc.js/issues"
