@@ -4,8 +4,10 @@
   "version": "0.0.0",
   "description": "",
   "scripts": {
-    "publish": "lerna run tsc && lerna publish",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "changeset": "changeset",
+    "version-packages": "changeset version",
+    "build": "lerna run build",
+    "release": "yarn run build && changeset publish"
   },
   "devDependencies": {
     "@types/node": "^17.0.36",
@@ -16,10 +18,13 @@
     "type": "git",
     "url": "git+https://github.com/tcavenezuela/fsuipc.js.git"
   },
-  "author": "Carlos Villalobos",
+  "author": "Carlos Villalobos <carliyipxd@gmail.com>",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/tcavenezuela/fsuipc.js/issues"
   },
-  "homepage": "https://github.com/tcavenezuela/fsuipc.js#readme"
+  "homepage": "https://github.com/tcavenezuela/fsuipc.js#readme",
+  "dependencies": {
+    "@changesets/cli": "^2.23.1"
+  }
 }
