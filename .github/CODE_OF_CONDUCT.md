@@ -40,7 +40,7 @@ Project maintainers who do not follow or enforce the Code of Conduct in good fai
 
 ## Attribution
 
-This Code of Conduct is adapted from the [Contributor Covenant][homepage], version 1.4, available at [http://contributor-covenant.org/version/1/4][version], the adapted version belongs to [Diego Mura][https://github.com/diegomura] in the [react-pdf][https://github.com/diegomura/react-pdf/blob/master/.github/CODE_OF_CONDUCT.md] repository. 
+This Code of Conduct is adapted from the [Contributor Covenant][homepage], version 1.4, available at [http://contributor-covenant.org/version/1/4][version], the adapted version belongs to [Diego Mura](https://github.com/diegomura) in the [react-pdf](https://github.com/diegomura/react-pdf/blob/master/.github/CODE_OF_CONDUCT.md) repository. 
 
 [homepage]: http://contributor-covenant.org
 [version]: http://contributor-covenant.org/version/1/4/
