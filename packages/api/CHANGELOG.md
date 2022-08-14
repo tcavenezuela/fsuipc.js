@@ -1,5 +1,15 @@
 # @fsuipc.js/api
 
+## 0.0.6
+
+### Patch Changes
+
+- 4339470: Add .nvmrc file to set node minimum version
+- 660f3f2: Add api package
+- Updated dependencies [4339470]
+- Updated dependencies [660f3f2]
+  - fsuipc.js@0.0.6
+
 ## 0.0.5
 
 ### Patch Changes
