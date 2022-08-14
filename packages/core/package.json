@@ -11,10 +11,13 @@
     "access": "public"
   },
   "directories": {
-    "lib": "lib"
+    "lib": "lib",
+    "src": "src"
   },
   "files": [
-    "lib"
+    "lib",
+    "src",
+    "binding.gyp"
   ],
   "repository": {
     "type": "git",
