@@ -1,7 +1,19 @@
 {
   "extends": "../../tsconfig.json",
   "compilerOptions": {
-    "outDir": "./lib"
+    "declaration": true,
+    "outDir": "./lib",
+    "baseUrl": "./",
+    "paths": {
+      "@shared": ["src/shared/index"],
+      "@shared/*": ["src/shared/*"],
+      "@offsets": ["src/utils/offsets/index"],
+      "@offsets/*": ["src/utils/offsets/*"],
+      "@mappings": ["src/utils/convert/mappings/index"],
+      "@mappings/*": ["src/utils/convert/mappings/*"],
+      "@convert": ["src/utils/convert/index"],
+      "@convert/*": ["src/utils/convert/*"]
+    }
   },
-  "include": ["./src"]
+  "include": ["src"]
 }
