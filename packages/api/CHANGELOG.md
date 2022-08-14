@@ -1,5 +1,13 @@
 # @fsuipc.js/api
 
+## 0.0.7
+
+### Patch Changes
+
+- 42e18bf: Fix workflow to include gyp file to compile the artifact when a user try to install the core dependency
+- Updated dependencies [42e18bf]
+  - fsuipc.js@0.0.7
+
 ## 0.0.6
 
 ### Patch Changes
