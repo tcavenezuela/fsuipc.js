@@ -11,12 +11,10 @@
     "access": "public"
   },
   "directories": {
-    "lib": "lib",
-    "build": "build"
+    "lib": "lib"
   },
   "files": [
-    "lib",
-    "build"
+    "lib"
   ],
   "repository": {
     "type": "git",

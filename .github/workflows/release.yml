@@ -13,7 +13,7 @@ concurrency: ${{ github.workflow }}-${{ github.ref }}
 jobs:
   release:
     name: Release
-    runs-on: windows-latest
+    runs-on: ubuntu-latest
     steps:
       - name: Checkout Repo
         uses: actions/checkout@v2
@@ -27,7 +27,7 @@ jobs:
           node-version: ${{ env.NODE }}
 
       - name: Install Dependencies
-        run: yarn install
+        run: yarn install --ignore-scripts # --ignore-scripts to avoid a crash when workflow try to compile the core fsuipc module.
 
       - name: Create Release Pull Request or Publish to npm
         id: changesets
