@@ -1,4 +1,4 @@
-<p align="center">
+<p>
   <br />
   <img src="https://user-images.githubusercontent.com/8359234/184555256-5e6458a4-6e4c-489b-b1a6-bfe2e6dcd15a.png" alt="fsuipc.js" width="150"/>
   <br />
