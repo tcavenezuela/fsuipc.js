@@ -1,5 +1,20 @@
 # @fsuipc.js/api
 
+## 1.0.0
+
+### Major Changes
+
+- ad3aa7c: Add eslint and prettier config to enforce code style [Release Build ✨🚀]
+
+### Patch Changes
+
+- a7f55f2: Add readme files 📝
+- e7ce8e6: Add close method to API Package (Thanks @hiaaryan) ✨
+- Updated dependencies [a7f55f2]
+- Updated dependencies [e7ce8e6]
+- Updated dependencies [ad3aa7c]
+  - fsuipc.js@1.0.0
+
 ## 0.0.7
 
 ### Patch Changes
