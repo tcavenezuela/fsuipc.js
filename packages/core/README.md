@@ -1,3 +1,19 @@
+<p>
+  <br />
+  <img src="https://user-images.githubusercontent.com/8359234/184555256-5e6458a4-6e4c-489b-b1a6-bfe2e6dcd15a.png" alt="fsuipc.js" width="150"/>
+  <br />
+    <sub><strong>FSUIPC client implementation for NodeJS</strong></sub>
+  <br />
+  <br />
+  </a>
+</p>
+
+[![npm version](https://badge.fury.io/js/fsuipc.js.svg)](https://badge.fury.io/js/fsuipc.js)
+![ts](https://badgen.net/badge/Built%20With/TypeScript/blue)
+[![release](https://github.com/tcavenezuela/fsuipc.js/actions/workflows/release.yml/badge.svg?branch=master)](https://github.com/tcavenezuela/fsuipc.js/actions/workflows/release.yml)
+
+[FSUIPC](http://www.fsuipc.com/) client implementation for NodeJS.
+
 # fsuipc.js
 
 This package allows you to use the single-minimal version of fsuipc.js.
