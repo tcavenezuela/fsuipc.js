@@ -11,15 +11,15 @@ export const pressurisation: OffsetList = {
     category: OffsetCategory.PRESSURISATION,
     description: 'pressurisation: cabin altitude - ft',
     type: Type.Int32,
-    permission: 'r',
+    permission: 'r'
   }),
   pressCabinAltTarget: new Offset({
-    value: 0x31C,
+    value: 0x31c,
     name: 'pressCabinAltTarget',
     category: OffsetCategory.PRESSURISATION,
     description: 'pressurisation: target cabin altitude - ft',
     type: Type.Int32,
-    permission: 'r',
+    permission: 'r'
   }),
   pressCabinAltChange: new Offset({
     value: 0x320,
@@ -27,7 +27,7 @@ export const pressurisation: OffsetList = {
     category: OffsetCategory.PRESSURISATION,
     description: 'pressurisation: cabin altitude change set - ft/s',
     type: Type.Single,
-    permission: 'r',
+    permission: 'r'
   }),
   pressCabinAltPressDiff: new Offset({
     value: 0x324,
@@ -35,7 +35,7 @@ export const pressurisation: OffsetList = {
     category: OffsetCategory.PRESSURISATION,
     description: 'pressurisation: cabin altitude change set - lb/sqft',
     type: Type.Single,
-    permission: 'r',
+    permission: 'r'
   }),
   pressDumpSwitch: new Offset({
     value: 0x328,
@@ -44,6 +44,6 @@ export const pressurisation: OffsetList = {
     description: 'pressurisation: dump switch',
     convert: '!!{VAL}',
     type: Type.UInt32,
-    permission: 'rw',
-  }),
+    permission: 'rw'
+  })
 };

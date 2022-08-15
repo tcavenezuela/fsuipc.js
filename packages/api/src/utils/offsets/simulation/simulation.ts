@@ -12,16 +12,16 @@ export const simulation: OffsetList = {
     description: 'startup path',
     type: Type.String,
     length: 256,
-    permission: 'r',
+    permission: 'r'
   }),
   logbookName: new Offset({
-    value: 0x12C,
+    value: 0x12c,
     name: 'logbookName',
     category: OffsetCategory.SIMULATION,
     description: 'logbook name - FS2002+',
     type: Type.String,
     length: 256,
-    permission: 'r',
+    permission: 'r'
   }),
   flightPlan: new Offset({
     value: 0x130,
@@ -30,15 +30,15 @@ export const simulation: OffsetList = {
     description: 'current flight plan - FSX only',
     type: Type.String,
     length: 256,
-    permission: 'r',
+    permission: 'r'
   }),
   availableMemory: new Offset({
-    value: 0x24C,
+    value: 0x24c,
     name: 'availableMemory',
     category: OffsetCategory.SIMULATION,
     description: 'available FS memory - kb',
     type: Type.Int32,
-    permission: 'r',
+    permission: 'r'
   }),
   trafficDensityAirline: new Offset({
     value: 0x250,
@@ -46,7 +46,7 @@ export const simulation: OffsetList = {
     category: OffsetCategory.SIMULATION,
     description: 'Airline traffic density percent',
     type: Type.Byte,
-    permission: 'rw',
+    permission: 'rw'
   }),
   trafficDensityGA: new Offset({
     value: 0x251,
@@ -54,7 +54,7 @@ export const simulation: OffsetList = {
     category: OffsetCategory.SIMULATION,
     description: 'General Aviation traffic density percent',
     type: Type.Byte,
-    permission: 'rw',
+    permission: 'rw'
   }),
   trafficDensityShips: new Offset({
     value: 0x252,
@@ -62,7 +62,7 @@ export const simulation: OffsetList = {
     category: OffsetCategory.SIMULATION,
     description: 'Ships and Ferries traffic density percent',
     type: Type.Byte,
-    permission: 'rw',
+    permission: 'rw'
   }),
   cloudCoverDensity: new Offset({
     value: 0x254,
@@ -70,7 +70,7 @@ export const simulation: OffsetList = {
     category: OffsetCategory.SIMULATION,
     description: 'cloud cover density - 5-8',
     type: Type.Byte,
-    permission: 'rw',
+    permission: 'rw'
   }),
   cloudComplex: new Offset({
     value: 0x255,
@@ -79,7 +79,7 @@ export const simulation: OffsetList = {
     description: 'cloud simple/complex - 0 = simple, 1 = complex',
     convert: '!!{VAL}',
     type: Type.Byte,
-    permission: 'rw',
+    permission: 'rw'
   }),
   thermalVisualisation: new Offset({
     value: 0x256,
@@ -87,14 +87,14 @@ export const simulation: OffsetList = {
     category: OffsetCategory.SIMULATION,
     description: '0 = none, 1 = natural, 2 = schematic',
     type: Type.Byte,
-    permission: 'r',
+    permission: 'r'
   }),
   memoryAssignedToFSUIPC: new Offset({
     value: 0x258,
     name: 'memoryAssignedToFSUIPC',
     category: OffsetCategory.SIMULATION,
     type: Type.Int16,
-    permission: 'r',
+    permission: 'r'
   }),
   pauseControl: new Offset({
     value: 0x262,
@@ -103,7 +103,7 @@ export const simulation: OffsetList = {
     description: 'pause control (write only)',
     convert: '{VAL} ? 1 : 0',
     type: Type.UInt16,
-    permission: 'w',
+    permission: 'w'
   }),
   pauseFlag: new Offset({
     value: 0x264,
@@ -112,7 +112,7 @@ export const simulation: OffsetList = {
     description: 'simulation paused',
     convert: '!!{VAL}',
     type: Type.Int16,
-    permission: 'r',
+    permission: 'r'
   }),
   framerate: new Offset({
     value: 0x274,
@@ -121,16 +121,16 @@ export const simulation: OffsetList = {
     description: 'framerate',
     convert: 'Math.floor(32768/{VAL})',
     type: Type.UInt16,
-    permission: 'r',
+    permission: 'r'
   }),
   zoomfactor: new Offset({
-    value: 0x2B2,
+    value: 0x2b2,
     name: 'zoomfactor',
     category: OffsetCategory.SIMULATION,
     description: 'zoom factor - FS2002+',
     convert: 'Math.floor({VAL}/64)',
     type: Type.UInt16,
-    permission: 'r',
+    permission: 'r'
   }),
   controlTimer1: new Offset({
     value: 0x310,
@@ -138,7 +138,7 @@ export const simulation: OffsetList = {
     category: OffsetCategory.SIMULATION,
     description: 'control timer 1 - FS2002+ - Seconds',
     type: Type.Double,
-    permission: 'r',
+    permission: 'r'
   }),
   controlTimer2: new Offset({
     value: 0x368,
@@ -146,16 +146,16 @@ export const simulation: OffsetList = {
     category: OffsetCategory.SIMULATION,
     description: 'control timer 2 - FS2002+',
     type: Type.Int32,
-    permission: 'r',
+    permission: 'r'
   }),
   fuelBoxFlag: new Offset({
-    value: 0x32C,
+    value: 0x32c,
     name: 'fuelBoxFlag',
     category: OffsetCategory.SIMULATION,
     description: 'plane in fuel box flag',
     convert: '!!{VAL}',
     type: Type.UInt16,
-    permission: 'r',
+    permission: 'r'
   }),
   comFreqInc: new Offset({
     value: 0x358,
@@ -164,7 +164,7 @@ export const simulation: OffsetList = {
     description: 'COM freq increment - KHz',
     convert: '({VAL}) === 0 ? 50 : 25',
     type: Type.Int16,
-    permission: 'rw',
+    permission: 'rw'
   }),
   adfFreqInc: new Offset({
     value: 0x358,
@@ -173,7 +173,7 @@ export const simulation: OffsetList = {
     description: 'ADF freq increment - KHz',
     convert: '({VAL}) === 0 ? 1.0 : 0.1',
     type: Type.Int16,
-    permission: 'rw',
+    permission: 'rw'
   }),
   reliability: new Offset({
     value: 0x372,
@@ -181,7 +181,7 @@ export const simulation: OffsetList = {
     category: OffsetCategory.SIMULATION,
     description: 'reliability - percent',
     type: Type.UInt16,
-    permission: 'rw',
+    permission: 'rw'
   }),
   lastSavedFlightName: new Offset({
     value: 0x400,
@@ -190,15 +190,15 @@ export const simulation: OffsetList = {
     description: 'name of last saved flight',
     type: Type.String,
     length: 128,
-    permission: 'r',
+    permission: 'r'
   }),
   elapsedTime: new Offset({
-    value: 0x4A8,
+    value: 0x4a8,
     name: 'elapsedTime',
     category: OffsetCategory.SIMULATION,
     description: 'simulated flight time - seconds (paused while simulation paused)',
     type: Type.Double,
-    permission: 'r',
+    permission: 'r'
   }),
   elapsedRealTime: new Offset({
     value: 0x588,
@@ -206,88 +206,91 @@ export const simulation: OffsetList = {
     category: OffsetCategory.SIMULATION,
     description: 'elasped real time',
     type: Type.Double,
-    permission: 'r',
+    permission: 'r'
   }),
   smokeSystemAvailable: new Offset({
-    value: 0x5D4,
+    value: 0x5d4,
     name: 'smokeSystemAvailable',
     category: OffsetCategory.SIMULATION,
     convert: '!!{VAL}',
     description: 'smoke system available - <= FS2000',
     type: Type.UInt16,
-    permission: 'r',
+    permission: 'r'
   }),
   slewMode: new Offset({
-    value: 0x5DC,
+    value: 0x5dc,
     name: 'slewMode',
     category: OffsetCategory.SIMULATION,
     convert: '!!{VAL}',
     description: 'slew mode activated',
     type: Type.UInt16,
-    permission: 'rw',
+    permission: 'rw'
   }),
   slewRollRate: new Offset({
-    value: 0x5E4,
+    value: 0x5e4,
     name: 'slewRollRate',
     category: OffsetCategory.SIMULATION,
     description: '192 gives a 360 roll in about 1 minute - -ve right, +ve left',
     type: Type.Int16,
-    permission: 'rw',
+    permission: 'rw'
   }),
   slewYawRate: new Offset({
-    value: 0x5E6,
+    value: 0x5e6,
     name: 'slewYawRate',
     category: OffsetCategory.SIMULATION,
-    description: 'Slew mode turns - +ve values are left, -ve are right - 24 takes about 1 minute to complete a 360',
+    description:
+      'Slew mode turns - +ve values are left, -ve are right - 24 takes about 1 minute to complete a 360',
     type: Type.Int16,
-    permission: 'rw',
+    permission: 'rw'
   }),
   slewVerticalRate: new Offset({
-    value: 0x5E8,
+    value: 0x5e8,
     name: 'slewVerticalRate',
     category: OffsetCategory.SIMULATION,
-    description: '16384=no alt slew rate - 16383 to 0 increasing slew UP rates, 16385 to 32767 increasing slew DOWN rates',
+    description:
+      '16384=no alt slew rate - 16383 to 0 increasing slew UP rates, 16385 to 32767 increasing slew DOWN rates',
     type: Type.Int16,
-    permission: 'rw',
+    permission: 'rw'
   }),
   slewBackwardForwardRate: new Offset({
-    value: 0x5EB,
+    value: 0x5eb,
     name: 'slewBackwardForwardRate',
     category: OffsetCategory.SIMULATION,
     description: 'Slew fwd if-ve, bwd if +ve, 1=very slow ... 127=very fast, -128 fastest forward',
     type: Type.SByte,
-    permission: 'rw',
+    permission: 'rw'
   }),
   slewLeftRightRate: new Offset({
-    value: 0x5ED,
+    value: 0x5ed,
     name: 'slewLeftRightRate',
     category: OffsetCategory.SIMULATION,
-    description: 'Slew left if -ve, right if +ve, 1=very slow ... 127=very fast, -128 fastest leftward',
+    description:
+      'Slew left if -ve, right if +ve, 1=very slow ... 127=very fast, -128 fastest leftward',
     type: Type.SByte,
-    permission: 'rw',
+    permission: 'rw'
   }),
   slewPitchRate: new Offset({
-    value: 0x5EE,
+    value: 0x5ee,
     name: 'slewPitchRate',
     category: OffsetCategory.SIMULATION,
     description: '16384=no pitch slew -16384 pitch up, 16384 pitch down, range 0-32767',
     type: Type.Int16,
-    permission: 'rw',
+    permission: 'rw'
   }),
   slewModeDisplay: new Offset({
-    value: 0x5F4,
+    value: 0x5f4,
     name: 'slewModeDisplay',
     category: OffsetCategory.SIMULATION,
     description: '0=off, 1=coods/hdg/speed, 2=fps, 3=all',
-    type: Type.UInt16,
+    type: Type.UInt16
   }),
   flightModeDisplay: new Offset({
-    value: 0x5FC,
+    value: 0x5fc,
     name: 'flightModeDisplay',
     category: OffsetCategory.SIMULATION,
     description: '0=off, 1=coods/hdg/speed, 2=fps, 3=all',
     type: Type.UInt16,
-    permission: 'rw',
+    permission: 'rw'
   }),
   replayInAction: new Offset({
     value: 0x628,
@@ -296,15 +299,15 @@ export const simulation: OffsetList = {
     description: 'replay in action',
     convert: '!!{VAL}',
     type: Type.UInt32,
-    permission: 'rw',
+    permission: 'rw'
   }),
   replayTimerCountdown: new Offset({
-    value: 0x62C,
+    value: 0x62c,
     name: 'replayTimerCountdown',
     category: OffsetCategory.SIMULATION,
     description: 'instant replay time left in seconds - controls the playback',
     type: Type.UInt32,
-    permission: 'rw',
+    permission: 'rw'
   }),
   videoRecording: new Offset({
     value: 0x760,
@@ -313,7 +316,7 @@ export const simulation: OffsetList = {
     description: 'video recording flag - FS2002+',
     convert: '!!{VAL}',
     type: Type.Byte,
-    permission: 'r',
+    permission: 'r'
   }),
   flightAnalysisMode: new Offset({
     value: 0x814,
@@ -321,15 +324,16 @@ export const simulation: OffsetList = {
     category: OffsetCategory.SIMULATION,
     description: '0=off 1=landing 2=course tracking 3=manoeuvres',
     type: Type.UInt32,
-    permission: 'rw',
+    permission: 'rw'
   }),
   crashDetection: new Offset({
     value: 0x830,
     name: 'crashDetection',
     category: OffsetCategory.SIMULATION,
-    description: '0=Ignore Crash, 1=Detect Crash and restart, 2=Detect Crash and show Graph (last is not applicable to FS2002/4)',
+    description:
+      '0=Ignore Crash, 1=Detect Crash and restart, 2=Detect Crash and show Graph (last is not applicable to FS2002/4)',
     type: Type.UInt16,
-    permission: 'rw',
+    permission: 'rw'
   }),
   crashDetectionFSX: new Offset({
     value: 0x832,
@@ -337,7 +341,7 @@ export const simulation: OffsetList = {
     category: OffsetCategory.SIMULATION,
     description: '0=Ignore Crash, 1=Detect Crash',
     type: Type.Byte,
-    permission: 'r',
+    permission: 'r'
   }),
   crashDetectionFSXAi: new Offset({
     value: 0x833,
@@ -345,7 +349,7 @@ export const simulation: OffsetList = {
     category: OffsetCategory.SIMULATION,
     description: '0=Ignore Crash, 1=Detect Crash',
     type: Type.Byte,
-    permission: 'r',
+    permission: 'r'
   }),
   crashed: new Offset({
     value: 0x840,
@@ -354,185 +358,185 @@ export const simulation: OffsetList = {
     description: 'crashed',
     convert: '!!{VAL}',
     type: Type.Int16,
-    permission: 'r',
+    permission: 'r'
   }),
   soundControl: new Offset({
-    value: 0xB20,
+    value: 0xb20,
     name: 'soundControl',
     category: OffsetCategory.SIMULATION,
     description: 'soundControl',
     convert: '!!{VAL}',
     type: Type.Int16,
-    permission: 'rw',
+    permission: 'rw'
   }),
   soundActive: new Offset({
-    value: 0xB24,
+    value: 0xb24,
     name: 'soundActive',
     category: OffsetCategory.SIMULATION,
     description: 'soundActive',
     convert: '!!{VAL}',
     type: Type.Int16,
-    permission: 'r',
+    permission: 'r'
   }),
   scenaryComplexity: new Offset({
-    value: 0xB60,
+    value: 0xb60,
     name: 'scenaryComplexity',
     category: OffsetCategory.SIMULATION,
     description: 'scenary complexity - 0-5',
     type: Type.UInt16,
-    permission: 'rw',
+    permission: 'rw'
   }),
   internationalUnit: new Offset({
-    value: 0xC18,
+    value: 0xc18,
     name: 'internationalUnit',
     category: OffsetCategory.SIMULATION,
     description: 'international units',
     convert: '{VAL} === 0 ? `us` : {VAL} === 1 ? `metric_feet` : `metric_meters`',
     type: Type.Int16,
-    permission: 'rw',
+    permission: 'rw'
   }),
   simulationRate: new Offset({
-    value: 0xC1A,
+    value: 0xc1a,
     name: 'simulationRate',
     category: OffsetCategory.SIMULATION,
     description: 'international units',
     convert: '+({VAL} / 256).toFixed(2)',
     type: Type.Int16,
-    permission: 'rw',
+    permission: 'rw'
   }),
   localTimeString: new Offset({
-    value: 0xC20,
+    value: 0xc20,
     name: 'localTimeString',
     category: OffsetCategory.SIMULATION,
     description: 'local time string hh:mm:ss',
     type: Type.String,
     length: 9,
-    permission: 'r',
+    permission: 'r'
   }),
   realism: new Offset({
-    value: 0xC44,
+    value: 0xc44,
     name: 'realism',
     category: OffsetCategory.SIMULATION,
     description: 'realism - percent',
     type: Type.UInt16,
-    permission: 'rw',
+    permission: 'rw'
   }),
   textureQuality: new Offset({
-    value: 0xC92,
+    value: 0xc92,
     name: 'textureQuality',
     category: OffsetCategory.SIMULATION,
     description: 'texture quality - 0 to 3',
     type: Type.UInt16,
-    permission: 'rw',
+    permission: 'rw'
   }),
   macroOrLuaParameters: new Offset({
-    value: 0xD6C,
+    value: 0xd6c,
     name: 'macroOrLuaParameters',
     category: OffsetCategory.SIMULATION,
     description: 'macro or LUA parameters',
     type: Type.UInt32,
-    permission: 'rw',
+    permission: 'rw'
   }),
   macroOrLuaString: new Offset({
-    value: 0xD70,
+    value: 0xd70,
     name: 'macroOrLuaString',
     category: OffsetCategory.SIMULATION,
     description: 'macro or LUA command',
     type: Type.String,
     length: 40,
-    permission: 'rw',
+    permission: 'rw'
   }),
   internationalNSSetting: new Offset({
-    value: 0xD98,
+    value: 0xd98,
     name: 'internationalNSSetting',
     category: OffsetCategory.SIMULATION,
     description: 'international N/S setting - 2=north 3=south',
     type: Type.Int16,
-    permission: 'rw',
+    permission: 'rw'
   }),
   internationalEWSetting: new Offset({
-    value: 0xD9C,
+    value: 0xd9c,
     name: 'internationalEWSetting',
     category: OffsetCategory.SIMULATION,
     description: 'international E/W setting - 0=east 1=west',
     type: Type.Int16,
-    permission: 'rw',
+    permission: 'rw'
   }),
   scenaryVariableUSRVAR: new Offset({
-    value: 0xDD6,
+    value: 0xdd6,
     name: 'scenaryVariableUSRVAR',
     category: OffsetCategory.SIMULATION,
     description: 'scenary variable USRVAR 0312h',
     type: Type.UInt16,
-    permission: 'rw',
+    permission: 'rw'
   }),
   scenaryVariableUSRVAR2: new Offset({
-    value: 0xDD8,
+    value: 0xdd8,
     name: 'scenaryVariableUSRVAR2',
     category: OffsetCategory.SIMULATION,
     description: 'scenary variable USRVAR2 0314h',
     type: Type.UInt16,
-    permission: 'rw',
+    permission: 'rw'
   }),
   scenaryVariableUSRVAR3: new Offset({
-    value: 0xDDA,
+    value: 0xdda,
     name: 'scenaryVariableUSRVAR3',
     category: OffsetCategory.SIMULATION,
     description: 'scenary variable USRVAR3 0316h',
     type: Type.UInt16,
-    permission: 'rw',
+    permission: 'rw'
   }),
   scenaryVariableUSRVAR4: new Offset({
-    value: 0xDDC,
+    value: 0xddc,
     name: 'scenaryVariableUSRVAR4',
     category: OffsetCategory.SIMULATION,
     description: 'scenary variable USRVAR4 0318h',
     type: Type.UInt16,
-    permission: 'r',
+    permission: 'r'
   }),
   scenaryVariableUSRVAR5: new Offset({
-    value: 0xDDE,
+    value: 0xdde,
     name: 'scenaryVariableUSRVAR5',
     category: OffsetCategory.SIMULATION,
     description: 'scenary variable USRVAR5 031Ah',
     type: Type.UInt16,
-    permission: 'rw',
+    permission: 'rw'
   }),
   groundSceneryShadows: new Offset({
-    value: 0x11A2,
+    value: 0x11a2,
     name: 'groundSceneryShadows',
     category: OffsetCategory.SIMULATION,
     description: 'ground scenery shadows - on/off',
     convert: '{VAL} === 1',
     type: Type.Byte,
-    permission: 'rw',
+    permission: 'rw'
   }),
   aircraftShadows: new Offset({
-    value: 0x11A4,
+    value: 0x11a4,
     name: 'aircraftShadows',
     category: OffsetCategory.SIMULATION,
     description: 'aircraft shadows',
     convert: '!!{VAL}',
     type: Type.UInt16,
-    permission: 'rw',
+    permission: 'rw'
   }),
   aircraftReflections: new Offset({
-    value: 0x11B6,
+    value: 0x11b6,
     name: 'aircraftReflections',
     category: OffsetCategory.SIMULATION,
     description: 'aircraft shadows',
     convert: '{VAL} === 2',
     type: Type.Byte,
-    permission: 'rw',
+    permission: 'rw'
   }),
   unlimitedFuel: new Offset({
-    value: 0x123F,
+    value: 0x123f,
     name: 'unlimitedFuel',
     category: OffsetCategory.SIMULATION,
     description: 'unlimited fuel',
     convert: '!!{VAL}',
     type: Type.Byte,
-    permission: 'r',
+    permission: 'r'
   }),
   textDisplayMode: new Offset({
     value: 0x1274,
@@ -540,6 +544,6 @@ export const simulation: OffsetList = {
     category: OffsetCategory.SIMULATION,
     description: 'text display mode (eg: ATIS) - 0=static 1=scroll',
     type: Type.UInt16,
-    permission: 'rw',
-  }),
+    permission: 'rw'
+  })
 };

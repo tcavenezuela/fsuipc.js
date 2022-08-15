@@ -1,4 +1,13 @@
-const Capabilities = ['dme', 'tacan', 'voice', 'noSignal', 'dmeGlideslope', 'noBackCourse', 'glideslope', 'isLocaliser'];
+const Capabilities = [
+  'dme',
+  'tacan',
+  'voice',
+  'noSignal',
+  'dmeGlideslope',
+  'noBackCourse',
+  'glideslope',
+  'isLocaliser'
+];
 
 export const navCapabilities = (values: number[]): { [key: string]: boolean } => {
   const capabilities: { [key: string]: boolean } = {};

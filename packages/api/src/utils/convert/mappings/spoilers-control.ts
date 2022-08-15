@@ -3,5 +3,5 @@ export const spoilersControl = (value: number): number => {
     return 0;
   }
 
-  return Math.round((value - 4800) / (16383 - 4800) * 100);
+  return Math.round(((value - 4800) / (16383 - 4800)) * 100);
 };

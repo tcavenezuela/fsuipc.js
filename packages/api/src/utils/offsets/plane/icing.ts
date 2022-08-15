@@ -12,15 +12,15 @@ export const icing: OffsetList = {
     description: 'structural ice - decimal percent',
     type: Type.UInt16,
     convert: '+({VAL} / 16384 * 100).toFixed(2)',
-    permission: 'r',
+    permission: 'r'
   }),
   pitotIce: new Offset({
-    value: 0x34A,
+    value: 0x34a,
     name: 'pitotIce',
     category: OffsetCategory.ICING,
     description: 'structural ice - decimal percent',
     type: Type.UInt16,
     convert: '+({VAL} / 16384 * 100).toFixed(2)',
-    permission: 'r',
-  }),
+    permission: 'r'
+  })
 };

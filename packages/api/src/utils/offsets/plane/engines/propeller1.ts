@@ -11,7 +11,7 @@ export const propeller1: OffsetList = {
     category: OffsetCategory.ENGINE,
     description: 'propeller 1 RPM',
     type: Type.Double,
-    permission: 'r',
+    permission: 'r'
   }),
   propeller1RPMPercent: new Offset({
     value: 0x2408,
@@ -20,7 +20,7 @@ export const propeller1: OffsetList = {
     description: 'propeller 1 RPM percent',
     convert: 'Math.round(+(+({VAL}).toFixed(4) * 100).toFixed(2))',
     type: Type.Double,
-    permission: 'r',
+    permission: 'r'
   }),
   propeller1Thrust: new Offset({
     value: 0x2410,
@@ -29,7 +29,7 @@ export const propeller1: OffsetList = {
     description: 'propeller 1 thrust - lb',
     convert: '+({VAL}).toFixed(2)',
     type: Type.Double,
-    permission: 'r',
+    permission: 'r'
   }),
   propeller1BetaBladeAngle: new Offset({
     value: 0x2418,
@@ -38,7 +38,7 @@ export const propeller1: OffsetList = {
     description: 'propeller 1 beta blade angle - rad',
     convert: '+({VAL}).toFixed(4)',
     type: Type.Double,
-    permission: 'r',
+    permission: 'r'
   }),
   propeller1FeatheringInhibit: new Offset({
     value: 0x2420,
@@ -47,7 +47,7 @@ export const propeller1: OffsetList = {
     description: 'propeller 1 feathering inhibit',
     convert: '!!{VAL}',
     type: Type.UInt32,
-    permission: 'rw',
+    permission: 'rw'
   }),
   propeller1Feathered: new Offset({
     value: 0x2424,
@@ -56,7 +56,7 @@ export const propeller1: OffsetList = {
     description: 'propeller 1 feathered',
     convert: '!!{VAL}',
     type: Type.UInt32,
-    permission: 'r',
+    permission: 'r'
   }),
   propeller1SyncDeltaLever: new Offset({
     value: 0x2428,
@@ -64,7 +64,7 @@ export const propeller1: OffsetList = {
     category: OffsetCategory.ENGINE,
     description: 'propeller 1 sync delta lever',
     type: Type.Double,
-    permission: 'r',
+    permission: 'r'
   }),
   propeller1AutofeatherArmed: new Offset({
     value: 0x2430,
@@ -73,7 +73,7 @@ export const propeller1: OffsetList = {
     description: 'propeller 1 autofeather armed flag',
     convert: '!!{VAL}',
     type: Type.UInt32,
-    permission: 'rw',
+    permission: 'rw'
   }),
   propeller1FeatherSwitch: new Offset({
     value: 0x2434,
@@ -82,7 +82,7 @@ export const propeller1: OffsetList = {
     description: 'propeller 1 feather switch',
     convert: '!!{VAL}',
     type: Type.UInt32,
-    permission: 'rw',
+    permission: 'rw'
   }),
   propeller1PanelAutofeatherSwitch: new Offset({
     value: 0x2438,
@@ -91,16 +91,16 @@ export const propeller1: OffsetList = {
     description: 'propeller 1 panel autofeather switch',
     convert: '!!{VAL}',
     type: Type.UInt32,
-    permission: 'rw',
+    permission: 'rw'
   }),
   propeller1Sync: new Offset({
-    value: 0x243C,
+    value: 0x243c,
     name: 'propeller1Sync',
     category: OffsetCategory.ENGINE,
     description: 'propeller 1 sync active',
     convert: '!!{VAL}',
     type: Type.UInt32,
-    permission: 'rw',
+    permission: 'rw'
   }),
   propeller1DeiceSwitch: new Offset({
     value: 0x2440,
@@ -109,6 +109,6 @@ export const propeller1: OffsetList = {
     description: 'propeller 1 de-ice active',
     convert: '!!{VAL}',
     type: Type.UInt32,
-    permission: 'rw',
-  }),
+    permission: 'rw'
+  })
 };

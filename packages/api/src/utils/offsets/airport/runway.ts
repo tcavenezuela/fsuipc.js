@@ -13,7 +13,7 @@ export const runway: OffsetList = {
     type: Type.Byte,
     mapping: true,
     convert: 'runwaySurfaceCondition',
-    permission: 'r',
+    permission: 'r'
   }),
   runwaySurfaceConditionValid: new Offset({
     value: 0x347,
@@ -22,7 +22,6 @@ export const runway: OffsetList = {
     description: 'surface condition valid flag',
     type: Type.Byte,
     convert: '!!{VAL}',
-    permission: 'r',
-  }),
+    permission: 'r'
+  })
 };
-

@@ -11,7 +11,7 @@ export const pushback: OffsetList = {
     category: OffsetCategory.PUSHBACK,
     description: 'pushback angle - radians',
     type: Type.Single,
-    permission: 'r',
+    permission: 'r'
   }),
   pushbackXContact: new Offset({
     value: 0x338,
@@ -19,15 +19,15 @@ export const pushback: OffsetList = {
     category: OffsetCategory.PUSHBACK,
     description: 'pushback X contact - ft',
     type: Type.Single,
-    permission: 'r',
+    permission: 'r'
   }),
   pushbackYContact: new Offset({
-    value: 0x33C,
+    value: 0x33c,
     name: 'pushbackYContact',
     category: OffsetCategory.PUSHBACK,
     description: 'pushback Y contact - ft',
     type: Type.Single,
-    permission: 'r',
+    permission: 'r'
   }),
   pushbackZContact: new Offset({
     value: 0x340,
@@ -35,7 +35,7 @@ export const pushback: OffsetList = {
     category: OffsetCategory.PUSHBACK,
     description: 'pushback Z contact - ft',
     type: Type.Single,
-    permission: 'r',
+    permission: 'r'
   }),
   pushbackWaitFlag: new Offset({
     value: 0x344,
@@ -44,7 +44,6 @@ export const pushback: OffsetList = {
     description: 'pushback wait flag',
     convert: '!!{VAL}',
     type: Type.UInt16,
-    permission: 'r',
-  }),
+    permission: 'r'
+  })
 };
-

@@ -1,19 +1,24 @@
+/* eslint-disable @typescript-eslint/no-var-requires */
+
 const fsuipcModule = require('bindings')('fsuipc.node');
 
-const sim = new fsuipcModule.FSUIPC();
+const simulator = new fsuipcModule.FSUIPC();
 
-sim.open()
-.then((obj: { add: (name: string, value: number, type: any) => any; process: () => any; }) => {
-  console.log(obj.add('clockHour', 0x238, fsuipcModule.Type.Byte));
-  return obj.process();
-})
-.then((result: any) => {
-  console.log("result:", JSON.stringify(result));
+simulator
+  .open()
+  .then((request) => {
+    /* Offset name, value in hexadecimal and data type. */
+    request.add('clockHour', 0x238, fsuipcModule.Type.Byte);
 
-  return sim.close();
-})
-.catch((err) => {
-  console.error("error:", err);
+    return request.process();
+  })
+  .then((result) => {
+    console.log(JSON.stringify(result));
 
-  return sim.close();
-});
+    return simulator.close();
+  })
+  .catch((err) => {
+    console.error(err);
+
+    return simulator.close();
+  });

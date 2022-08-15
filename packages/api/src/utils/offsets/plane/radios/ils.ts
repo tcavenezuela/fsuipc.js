@@ -12,7 +12,7 @@ export const ILS: OffsetList = {
     description: 'inner marker latitude',
     type: Type.Int32,
     convert: '{VAL} * 90 / 10001750',
-    permission: 'r',
+    permission: 'r'
   }),
   innerMarkerLongitude: new Offset({
     value: 0x1104,
@@ -21,7 +21,7 @@ export const ILS: OffsetList = {
     description: 'inner marker longitude',
     type: Type.Int32,
     convert: '{VAL} * 360 / (65536 * 65536)',
-    permission: 'r',
+    permission: 'r'
   }),
   innerMarkerAltitude: new Offset({
     value: 0x1108,
@@ -30,16 +30,16 @@ export const ILS: OffsetList = {
     description: 'inner marker altitude - ft',
     type: Type.Int32,
     convert: '+({VAL} * 3.28084).toFixed(2)',
-    permission: 'r',
+    permission: 'r'
   }),
   middleMarkerLatitude: new Offset({
-    value: 0x110C,
+    value: 0x110c,
     name: 'middleMarkerLatitude',
     category: OffsetCategory.RADIOS,
     description: 'middle marker latitude',
     type: Type.Int32,
     convert: '{VAL} * 90 / 10001750',
-    permission: 'r',
+    permission: 'r'
   }),
   middleMarkerLongitude: new Offset({
     value: 0x1110,
@@ -48,7 +48,7 @@ export const ILS: OffsetList = {
     description: 'middle marker longitude',
     type: Type.Int32,
     convert: '{VAL} * 360 / (65536 * 65536)',
-    permission: 'r',
+    permission: 'r'
   }),
   middleMarkerAltitude: new Offset({
     value: 0x1114,
@@ -57,7 +57,7 @@ export const ILS: OffsetList = {
     description: 'middle marker altitude - ft',
     type: Type.Int32,
     convert: '+({VAL} * 3.28084).toFixed(2)',
-    permission: 'r',
+    permission: 'r'
   }),
   outerMarkerLatitude: new Offset({
     value: 0x1118,
@@ -66,16 +66,16 @@ export const ILS: OffsetList = {
     description: 'outer marker latitude',
     type: Type.Int32,
     convert: '{VAL} * 90 / 10001750',
-    permission: 'r',
+    permission: 'r'
   }),
   outerMarkerLongitude: new Offset({
-    value: 0x111C,
+    value: 0x111c,
     name: 'outerMarkerLongitude',
     category: OffsetCategory.RADIOS,
     description: 'outer marker longitude',
     type: Type.Int32,
     convert: '{VAL} * 360 / (65536 * 65536)',
-    permission: 'r',
+    permission: 'r'
   }),
   outerMarkerAltitude: new Offset({
     value: 0x1120,
@@ -84,6 +84,6 @@ export const ILS: OffsetList = {
     description: 'outer marker altitude - ft',
     type: Type.Int32,
     convert: '+({VAL} * 3.28084).toFixed(2)',
-    permission: 'r',
-  }),
+    permission: 'r'
+  })
 };

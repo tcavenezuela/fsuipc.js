@@ -6,13 +6,13 @@ import { Offset } from '@shared/offset';
 
 export const electric: OffsetList = {
   masterBatterySwitch: new Offset({
-    value: 0x281C,
+    value: 0x281c,
     name: 'masterBatterySwitch',
     category: OffsetCategory.ELECTRIC,
     description: 'battery master switch',
     convert: '!!{VAL}',
     type: Type.UInt32,
-    permission: 'rw',
+    permission: 'rw'
   }),
   totalLoadAmp: new Offset({
     value: 0x2824,
@@ -20,15 +20,15 @@ export const electric: OffsetList = {
     category: OffsetCategory.ELECTRIC,
     description: 'total load amps',
     type: Type.Double,
-    permission: 'r',
+    permission: 'r'
   }),
   batteryLoad: new Offset({
-    value: 0x282C,
+    value: 0x282c,
     name: 'batteryLoad',
     category: OffsetCategory.ELECTRIC,
     description: 'battery load',
     type: Type.Double,
-    permission: 'r',
+    permission: 'r'
   }),
   batteryVoltage: new Offset({
     value: 0x2834,
@@ -36,7 +36,7 @@ export const electric: OffsetList = {
     category: OffsetCategory.ELECTRIC,
     description: 'battery voltage',
     type: Type.Double,
-    permission: 'r',
+    permission: 'r'
   }),
   mainBusVoltage: new Offset({
     value: 0x2840,
@@ -44,7 +44,7 @@ export const electric: OffsetList = {
     category: OffsetCategory.ELECTRIC,
     description: 'main bus voltage',
     type: Type.Double,
-    permission: 'r',
+    permission: 'r'
   }),
   mainBusAmps: new Offset({
     value: 0x2848,
@@ -52,7 +52,7 @@ export const electric: OffsetList = {
     category: OffsetCategory.ELECTRIC,
     description: 'main bus amps',
     type: Type.Double,
-    permission: 'r',
+    permission: 'r'
   }),
   avionicsBusVoltage: new Offset({
     value: 0x2850,
@@ -60,7 +60,7 @@ export const electric: OffsetList = {
     category: OffsetCategory.ELECTRIC,
     description: 'avionics bus voltage',
     type: Type.Double,
-    permission: 'r',
+    permission: 'r'
   }),
   avionicsBusAmps: new Offset({
     value: 0x2858,
@@ -68,7 +68,7 @@ export const electric: OffsetList = {
     category: OffsetCategory.ELECTRIC,
     description: 'avionics bus amps',
     type: Type.Double,
-    permission: 'r',
+    permission: 'r'
   }),
   hotBatteryBusVoltage: new Offset({
     value: 0x2860,
@@ -76,7 +76,7 @@ export const electric: OffsetList = {
     category: OffsetCategory.ELECTRIC,
     description: 'hot battery bus voltage',
     type: Type.Double,
-    permission: 'r',
+    permission: 'r'
   }),
   hotBatteryBusAmps: new Offset({
     value: 0x2868,
@@ -84,7 +84,7 @@ export const electric: OffsetList = {
     category: OffsetCategory.ELECTRIC,
     description: 'hot battery bus amps',
     type: Type.Double,
-    permission: 'r',
+    permission: 'r'
   }),
   batteryBusVoltage: new Offset({
     value: 0x2870,
@@ -92,7 +92,7 @@ export const electric: OffsetList = {
     category: OffsetCategory.ELECTRIC,
     description: 'battery bus voltage',
     type: Type.Double,
-    permission: 'r',
+    permission: 'r'
   }),
   batteryBusAmps: new Offset({
     value: 0x2878,
@@ -100,7 +100,7 @@ export const electric: OffsetList = {
     category: OffsetCategory.ELECTRIC,
     description: 'battery bus amps',
     type: Type.Double,
-    permission: 'r',
+    permission: 'r'
   }),
   generatorAlternator1BusVoltage: new Offset({
     value: 0x2880,
@@ -108,7 +108,7 @@ export const electric: OffsetList = {
     category: OffsetCategory.ELECTRIC,
     description: 'generator alternator 1 bus voltage',
     type: Type.Double,
-    permission: 'r',
+    permission: 'r'
   }),
   generatorAlternator1BusAmps: new Offset({
     value: 0x2888,
@@ -116,7 +116,7 @@ export const electric: OffsetList = {
     category: OffsetCategory.ELECTRIC,
     description: 'generator alternator 1 bus amps',
     type: Type.Double,
-    permission: 'r',
+    permission: 'r'
   }),
   generatorAlternator2BusVoltage: new Offset({
     value: 0x2890,
@@ -124,7 +124,7 @@ export const electric: OffsetList = {
     category: OffsetCategory.ELECTRIC,
     description: 'generator alternator 2 bus voltage',
     type: Type.Double,
-    permission: 'r',
+    permission: 'r'
   }),
   generatorAlternator2BusAmps: new Offset({
     value: 0x2898,
@@ -132,38 +132,38 @@ export const electric: OffsetList = {
     category: OffsetCategory.ELECTRIC,
     description: 'generator alternator 2 bus amps',
     type: Type.Double,
-    permission: 'r',
+    permission: 'r'
   }),
   generatorAlternator3BusVoltage: new Offset({
-    value: 0x28A0,
+    value: 0x28a0,
     name: 'generatorAlternator3BusVoltage',
     category: OffsetCategory.ELECTRIC,
     description: 'generator alternator 3 bus voltage',
     type: Type.Double,
-    permission: 'r',
+    permission: 'r'
   }),
   generatorAlternator3BusAmps: new Offset({
-    value: 0x28A8,
+    value: 0x28a8,
     name: 'generatorAlternator3BusAmps',
     category: OffsetCategory.ELECTRIC,
     description: 'generator alternator 3 bus amps',
     type: Type.Double,
-    permission: 'r',
+    permission: 'r'
   }),
   generatorAlternator4BusVoltage: new Offset({
-    value: 0x28B0,
+    value: 0x28b0,
     name: 'generatorAlternator4BusVoltage',
     category: OffsetCategory.ELECTRIC,
     description: 'generator alternator 4 bus voltage',
     type: Type.Double,
-    permission: 'r',
+    permission: 'r'
   }),
   generatorAlternator4BusAmps: new Offset({
-    value: 0x28B8,
+    value: 0x28b8,
     name: 'generatorAlternator4BusAmps',
     category: OffsetCategory.ELECTRIC,
     description: 'generator alternator 4 bus amps',
     type: Type.Double,
-    permission: 'r',
-  }),
+    permission: 'r'
+  })
 };

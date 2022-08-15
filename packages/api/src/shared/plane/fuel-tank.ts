@@ -19,5 +19,5 @@ export enum FuelTank {
   EXTERNAL = 'external',
   ISOLATE = 'isolate',
   LEFT_MAIN = 'leftMain',
-  RIGHT_MAIN = 'rightMain',
+  RIGHT_MAIN = 'rightMain'
 }
