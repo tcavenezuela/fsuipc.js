@@ -1,4 +1,15 @@
-const Lights = ['nav', 'beacon', 'land', 'taxi', 'strobe', 'panel', 'recognition', 'wing', 'logo', 'cabin'];
+const Lights = [
+  'nav',
+  'beacon',
+  'land',
+  'taxi',
+  'strobe',
+  'panel',
+  'recognition',
+  'wing',
+  'logo',
+  'cabin'
+];
 
 export const lightsMapping = (values: number[]): { [key: string]: boolean } => {
   const lights: { [key: string]: boolean } = {};

@@ -20,13 +20,12 @@ export class FsuipcApi {
     this.fsuipcGlobalInstance = new FSUIPC();
 
     try {
-      if (this.simulator){
+      if (this.simulator) {
         this.fsuipc = await this.fsuipcGlobalInstance.open(this.simulator);
       } else {
         this.fsuipc = await this.fsuipcGlobalInstance.open();
       }
       return true;
-
     } catch (error) {
       throw new FSUIPCError(error.message, error.code);
     }
@@ -36,13 +35,16 @@ export class FsuipcApi {
     try {
       this.fsuipc = await this.fsuipcGlobalInstance.close();
       return true;
-
     } catch (error) {
       throw new FSUIPCError(error.message, error.code);
     }
   }
 
-  public listen(interval: number, offsetList: string[], terminateOnError: boolean = true): Observable<ConvertedOffsetValues> {
+  public listen(
+    interval: number,
+    offsetList: string[],
+    terminateOnError = true
+  ): Observable<ConvertedOffsetValues> {
     if (!this.fsuipc) {
       return throwError(() => new Error('NO_FSUIPC_INSTANCE'));
     }
@@ -56,8 +58,11 @@ export class FsuipcApi {
             const rawOffsetValues: OffsetValues = { ...result };
             let offsetValues: ConvertedOffsetValues = {};
 
-            for (let offsetName of Object.keys(rawOffsetValues)) {
-              offsetValues = { ...offsetValues, [offsetName]: applyConversion(OFFSETS[offsetName], rawOffsetValues[offsetName]) };
+            for (const offsetName of Object.keys(rawOffsetValues)) {
+              offsetValues = {
+                ...offsetValues,
+                [offsetName]: applyConversion(OFFSETS[offsetName], rawOffsetValues[offsetName])
+              };
             }
 
             return offsetValues;
@@ -68,7 +73,7 @@ export class FsuipcApi {
             }
 
             return throwError(() => new Error(JSON.stringify(error)));
-          }),
+          })
         )
       )
     );
@@ -82,20 +87,35 @@ export class FsuipcApi {
     for (const offsetName of this.watchedOffsetCache) {
       const offset: Offset = OFFSETS[offsetName];
 
-      if (offset.type === Type.ByteArray || offset.type === Type.String || offset.type === Type.BitArray ) {
+      if (
+        offset.type === Type.ByteArray ||
+        offset.type === Type.String ||
+        offset.type === Type.BitArray
+      ) {
         const offsetType = offset.type as Type.ByteArray | Type.String | Type.BitArray;
         this.fsuipc.add(offset.name, offset.value, offsetType, offset.length);
       } else {
-        const offsetType = offset.type as Type.Byte | Type.SByte | Type.Int16 | Type.Int32 | Type.Int64 | Type.UInt16 | Type.UInt32 | Type.UInt64 | Type.Double | Type.Single;
+        const offsetType = offset.type as
+          | Type.Byte
+          | Type.SByte
+          | Type.Int16
+          | Type.Int32
+          | Type.Int64
+          | Type.UInt16
+          | Type.UInt32
+          | Type.UInt64
+          | Type.Double
+          | Type.Single;
         this.fsuipc.add(offset.name, offset.value, offsetType);
       }
     }
   }
 
   private shouldUpdateCache(offsetList: string[] = []): boolean {
-    return offsetList.length > 0 && (
-      !this.watchedOffsetCache.length ||
-      !this.watchedOffsetCache.every(item => offsetList.includes(item) )
+    return (
+      offsetList.length > 0 &&
+      (!this.watchedOffsetCache.length ||
+        !this.watchedOffsetCache.every((item) => offsetList.includes(item)))
     );
   }
 }

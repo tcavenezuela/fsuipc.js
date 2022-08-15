@@ -14,7 +14,7 @@ export interface OffsetData {
   description?: string;
   convert?: string;
   permission?: 'r' | 'w' | 'rw';
- }
+}
 
 export class Offset {
   public value: number = undefined;

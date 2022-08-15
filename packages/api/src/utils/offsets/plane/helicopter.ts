@@ -6,22 +6,22 @@ import { Offset } from '@shared/offset';
 
 export const helicopter: OffsetList = {
   rotorbreakActive: new Offset({
-    value: 0x81E,
+    value: 0x81e,
     name: 'rotorbreakActive',
     category: OffsetCategory.HELICOPTER,
     description: 'rotor brake active - Robinson only',
     convert: '!!{VAL}',
     type: Type.Byte,
-    permission: 'rw',
+    permission: 'rw'
   }),
   rotorClutchActive: new Offset({
-    value: 0x81F,
+    value: 0x81f,
     name: 'rotorClutchActive',
     category: OffsetCategory.HELICOPTER,
     description: 'rotor clutch active - Robinson only',
     convert: '!!{VAL}',
     type: Type.Byte,
-    permission: 'rw',
+    permission: 'rw'
   }),
   rotorChipWarning: new Offset({
     value: 0x820,
@@ -30,7 +30,7 @@ export const helicopter: OffsetList = {
     description: 'rotor chip detected - Rbinson only',
     convert: '!!{VAL}',
     type: Type.Byte,
-    permission: 'rw',
+    permission: 'rw'
   }),
   rotorGovWarning: new Offset({
     value: 0x821,
@@ -39,7 +39,7 @@ export const helicopter: OffsetList = {
     description: 'rotor gov active - Rbinson only',
     convert: '!!{VAL}',
     type: Type.Byte,
-    permission: 'rw',
+    permission: 'rw'
   }),
   rotorBreakApplication: new Offset({
     value: 0x822,
@@ -48,7 +48,7 @@ export const helicopter: OffsetList = {
     description: 'rotor brake application - percent - Robinson only',
     convert: 'Math.round({VAL} / 16384 * 100)',
     type: Type.UInt16,
-    permission: 'rw',
+    permission: 'rw'
   }),
   rotorLateralTrim: new Offset({
     value: 0x824,
@@ -57,7 +57,7 @@ export const helicopter: OffsetList = {
     description: 'rotor lateral trim - percent - Robinson only',
     convert: 'Math.round({VAL} / 16384 * 100)',
     type: Type.UInt16,
-    permission: 'rw',
+    permission: 'rw'
   }),
   governorSwitch: new Offset({
     value: 0x826,
@@ -66,7 +66,7 @@ export const helicopter: OffsetList = {
     description: 'governor switch activated - Robinson only',
     convert: '!!{VAL}',
     type: Type.Byte,
-    permission: 'rw',
+    permission: 'rw'
   }),
   rotorTransmissionTemp: new Offset({
     value: 0x828,
@@ -74,7 +74,7 @@ export const helicopter: OffsetList = {
     category: OffsetCategory.HELICOPTER,
     description: 'rotor transmission temp - degrees Rankine - read only',
     type: Type.Double,
-    permission: 'r',
+    permission: 'r'
   }),
   helicopterEngine1RPM: new Offset({
     value: 0x896,
@@ -82,7 +82,7 @@ export const helicopter: OffsetList = {
     category: OffsetCategory.HELICOPTER,
     description: 'engine 1 RPM %',
     type: Type.UInt16,
-    permission: 'rw',
+    permission: 'rw'
   }),
   helicopterEngine1RPMUnscaled: new Offset({
     value: 0x898,
@@ -90,16 +90,16 @@ export const helicopter: OffsetList = {
     category: OffsetCategory.HELICOPTER,
     description: 'engine 1 RPM unscalled - multiply by engineRPMScaler to obtain derivated RPM',
     type: Type.UInt16,
-    permission: 'rw',
+    permission: 'rw'
   }),
   helicopterEngine1ElectricalLoad: new Offset({
-    value: 0x8FC,
+    value: 0x8fc,
     name: 'helicopterEngine1ElectricalLoad',
     category: OffsetCategory.HELICOPTER,
     description: 'engine1 electrical load - trust only for helo - percent',
     convert: '{VAL} / 16384 * 100',
     type: Type.UInt32,
-    permission: 'r',
+    permission: 'r'
   }),
   helicopterEngine1TransmOilPres: new Offset({
     value: 0x900,
@@ -108,7 +108,7 @@ export const helicopter: OffsetList = {
     description: 'engine1 transmission oil pressure - trust only for helo - PSI',
     convert: '{VAL} / 16384',
     type: Type.UInt32,
-    permission: 'r',
+    permission: 'r'
   }),
   helicopterEngine1TransmOilTemp: new Offset({
     value: 0x904,
@@ -117,7 +117,7 @@ export const helicopter: OffsetList = {
     description: 'engine1 transmission oil temperature - trust only for helo - C',
     convert: '{VAL} / 16384',
     type: Type.UInt32,
-    permission: 'r',
+    permission: 'r'
   }),
   helicopterEngine1RotorRPM: new Offset({
     value: 0x908,
@@ -126,24 +126,24 @@ export const helicopter: OffsetList = {
     description: 'engine1 rotor RPM - percent',
     convert: '{VAL} / 16384 * 100',
     type: Type.UInt32,
-    permission: 'r',
+    permission: 'r'
   }),
   helicopterPitchTrim: new Offset({
-    value: 0xBBE,
+    value: 0xbbe,
     name: 'helicopterPitchTrim',
     description: 'helicopter pitch trim',
     category: OffsetCategory.HELICOPTER,
     convert: 'Math.round({VAL} / 16383 * 100)',
     type: Type.Int16,
-    permission: 'rw',
+    permission: 'rw'
   }),
   helicopterBankTrim: new Offset({
-    value: 0xC06,
+    value: 0xc06,
     name: 'helicopterBankTrim',
     description: 'helicopter bank trim - only when apply hello trim to both',
     category: OffsetCategory.HELICOPTER,
     convert: 'Math.round({VAL} / 16383 * 100)',
     type: Type.Int16,
-    permission: 'rw',
-  }),
+    permission: 'rw'
+  })
 };

@@ -5,6 +5,7 @@
 First, thank you for considering contributing to fsuipc.js!
 
 We welcome any type of contribution, not only code. You can help with
+
 - **QA**: file bug reports, the more details you can give the better (e.g. screenshots with the console open, simulator logs, etc)
 - **Marketing**: writing blog posts, howto's, printing stickers, ...
 - **Community**: presenting the project at meetups, organizing a dedicated meetup for the local community, ...
@@ -14,7 +15,7 @@ We welcome any type of contribution, not only code. You can help with
 
 fsuipc.js is a monorepo. That means the whole solution is broken into small pieces, or packages, each of which solves a specific problem. No need to worry much about it, since [Lerna](https://lerna.js.org/) does most of the work for us. If you are not familiarized with it it's always helpful to have an overall idea of how it works.
 
-Also, this library can't work in MacOS or Linux because depends on Windows C/C++ header files. You can still clone the repo in non-windows environments but only for work in files that don't depend in the FSUIPC module. 
+Also, this library can't work in MacOS or Linux because depends on Windows C/C++ header files. You can still clone the repo in non-windows environments but only for work in files that don't depend in the FSUIPC module.
 
 ## Submitting code
 
@@ -36,6 +37,5 @@ Thank you to all the people who have already contributed and make possible fsuip
 [blackholegalaxy, Flusinerd](https://github.com/fsuipc-node/api) for make the API wrapper around fsuipc-node.
 
 [carl0shd](https://github.com/carl0shd) for make the monorepo and make adjustments, unify all fsuipc community work and update the library.
-
 
 <!-- This `CONTRIBUTING.md` is based on @nayafia's template https://github.com/nayafia/contributing-template -->

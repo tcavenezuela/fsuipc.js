@@ -25,7 +25,8 @@
   },
   "scripts": {
     "test": "ts-node src/test.ts",
-    "build": "tsc && yarn run postbuild",
+    "lint": "eslint \"src/**/*.ts\"",
+    "build": "yarn run lint && tsc && yarn run postbuild",
     "postbuild": "copyfiles -u 1 \"src/*.d.ts\" lib",
     "native-build": "node-gyp build",
     "native-install": "node-gyp rebuild",

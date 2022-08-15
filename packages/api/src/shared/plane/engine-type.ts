@@ -4,5 +4,5 @@ export enum EngineType {
   SAILPLANE = 'sailplane',
   HELO = 'helo',
   ROCKET = 'rocket',
-  TURBOPROP = 'turboprop',
+  TURBOPROP = 'turboprop'
 }

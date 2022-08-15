@@ -19,7 +19,7 @@ import { autopilot } from './plane/autopilot';
 import { failure } from './failure/failure';
 import { electric } from './plane/electric';
 
-export const OFFSETS: OffsetList  = {
+export const OFFSETS: OffsetList = {
   // Position and Attitude
   ...positionAttitude,
 
@@ -48,7 +48,7 @@ export const OFFSETS: OffsetList  = {
   ...icing,
   ...engines,
   ...autopilot,
-  ...electric,
+  ...electric
 };
 
 export * from './airport/runway';

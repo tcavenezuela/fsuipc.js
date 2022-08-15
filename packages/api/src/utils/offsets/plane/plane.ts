@@ -13,7 +13,7 @@ export const plane: OffsetList = {
     convert: 'ftsecToKt',
     mapping: true,
     type: Type.Double,
-    permission: 'r',
+    permission: 'r'
   }),
   vs1: new Offset({
     value: 0x540,
@@ -23,7 +23,7 @@ export const plane: OffsetList = {
     convert: 'ftsecToKt',
     mapping: true,
     type: Type.Double,
-    permission: 'r',
+    permission: 'r'
   }),
   vc: new Offset({
     value: 0x548,
@@ -33,7 +33,7 @@ export const plane: OffsetList = {
     convert: 'ftsecToKt',
     mapping: true,
     type: Type.Double,
-    permission: 'r',
+    permission: 'r'
   }),
   vmd: new Offset({
     value: 0x550,
@@ -43,25 +43,25 @@ export const plane: OffsetList = {
     convert: 'ftsecToKt',
     mapping: true,
     type: Type.Double,
-    permission: 'r',
+    permission: 'r'
   }),
   smokeSystemControl: new Offset({
-    value: 0x5D8,
+    value: 0x5d8,
     name: 'smokeSystemControl',
     category: OffsetCategory.PLANE,
     convert: '!!{VAL}',
     description: 'smoke system control on/off',
     type: Type.UInt16,
-    permission: 'rw',
+    permission: 'rw'
   }),
   retractableGear: new Offset({
-    value: 0x60C,
+    value: 0x60c,
     name: 'retractableGear',
     category: OffsetCategory.PLANE,
     description: 'retractable gear (read only)',
     convert: '!!{VAL}',
     type: Type.Byte,
-    permission: 'r',
+    permission: 'r'
   }),
   retractableLeftFloatExtension: new Offset({
     value: 0x614,
@@ -70,7 +70,7 @@ export const plane: OffsetList = {
     description: 'retractable left float extension - percent',
     convert: 'Math.floor({VAL} / 16384 * 100)',
     type: Type.UInt16,
-    permission: 'r',
+    permission: 'r'
   }),
   retractableRightFloatExtension: new Offset({
     value: 0x616,
@@ -79,7 +79,7 @@ export const plane: OffsetList = {
     description: 'retractable right float extension - percent',
     convert: 'Math.floor({VAL} / 16384 * 100)',
     type: Type.UInt16,
-    permission: 'r',
+    permission: 'r'
   }),
   hasFlaps: new Offset({
     value: 0x778,
@@ -88,16 +88,16 @@ export const plane: OffsetList = {
     description: 'has flaps',
     convert: '!!{VAL}',
     type: Type.UInt32,
-    permission: 'r',
+    permission: 'r'
   }),
   hasStallHorn: new Offset({
-    value: 0x77C,
+    value: 0x77c,
     name: 'hasStallHorn',
     category: OffsetCategory.PLANE,
     description: 'has stall horn',
     convert: '!!{VAL}',
     type: Type.UInt32,
-    permission: 'r',
+    permission: 'r'
   }),
   hasMixtureEngine: new Offset({
     value: 0x780,
@@ -106,7 +106,7 @@ export const plane: OffsetList = {
     description: 'has mixture engine',
     convert: '!!{VAL}',
     type: Type.UInt32,
-    permission: 'r',
+    permission: 'r'
   }),
   hasCarbHeat: new Offset({
     value: 0x784,
@@ -115,16 +115,16 @@ export const plane: OffsetList = {
     description: 'has carburator heater',
     convert: '!!{VAL}',
     type: Type.UInt32,
-    permission: 'r',
+    permission: 'r'
   }),
   hasSpoilers: new Offset({
-    value: 0x78C,
+    value: 0x78c,
     name: 'hasSpoilers',
     category: OffsetCategory.PLANE,
     description: 'has spoilers',
     convert: '!!{VAL}',
     type: Type.UInt32,
-    permission: 'r',
+    permission: 'r'
   }),
   isTailDragger: new Offset({
     value: 0x790,
@@ -133,7 +133,7 @@ export const plane: OffsetList = {
     description: 'has spoilers',
     convert: '!!{VAL}',
     type: Type.UInt32,
-    permission: 'r',
+    permission: 'r'
   }),
   hasStrobes: new Offset({
     value: 0x794,
@@ -142,33 +142,33 @@ export const plane: OffsetList = {
     description: 'has strobes',
     convert: '!!{VAL}',
     type: Type.UInt32,
-    permission: 'r',
+    permission: 'r'
   }),
   hasToeBrakes: new Offset({
-    value: 0x79C,
+    value: 0x79c,
     name: 'hasToeBrakes',
     category: OffsetCategory.PLANE,
     description: 'has toe brakes',
     convert: '!!{VAL}',
     type: Type.UInt32,
-    permission: 'r',
+    permission: 'r'
   }),
   maxMach: new Offset({
-    value: 0xB0C,
+    value: 0xb0c,
     name: 'maxMach',
     category: OffsetCategory.PLANE,
     description: 'mach maximum operating - not FS2004',
     convert: '+({VAL} / 20438).toFixed(2)',
     type: Type.Int32,
-    permission: 'r',
+    permission: 'r'
   }),
   fuelSelectorsCount: new Offset({
-    value: 0x123E,
+    value: 0x123e,
     name: 'fuelSelectorsCount',
     category: OffsetCategory.PLANE,
     description: 'number of fuel selectors for the aircraft',
     type: Type.Byte,
-    permission: 'r',
+    permission: 'r'
   }),
   aircraftEmptyWeight: new Offset({
     value: 0x1330,
@@ -177,7 +177,7 @@ export const plane: OffsetList = {
     description: 'aicraft empty weight',
     convert: '+({VAL} / 256).toFixed(2)',
     type: Type.Int32,
-    permission: 'r',
+    permission: 'r'
   }),
   aircraftMaxGrossWeight: new Offset({
     value: 0x1334,
@@ -186,6 +186,6 @@ export const plane: OffsetList = {
     description: 'aicraft max gross weight',
     convert: '+({VAL} / 256).toFixed(2)',
     type: Type.Int32,
-    permission: 'r',
-  }),
+    permission: 'r'
+  })
 };

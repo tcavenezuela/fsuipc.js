@@ -11,7 +11,7 @@ export const enum Type {
   Single = 9,
   ByteArray = 10,
   String = 11,
-  BitArray = 12,
+  BitArray = 12
 }
 
 interface Offset {
@@ -36,12 +36,20 @@ export enum Simulator {
   P3D,
   FSX64,
   P3D64,
-  MSFS,
+  MSFS
 }
 
-type FixedSizedNumberType = Type.Byte|Type.SByte|Type.Int16|Type.Int32|Type.UInt16|Type.UInt32|Type.Double|Type.Single;
-type FixedSizedStringType = Type.Int64|Type.UInt64;
-type VariableSizedType = Type.ByteArray|Type.String|Type.BitArray;
+type FixedSizedNumberType =
+  | Type.Byte
+  | Type.SByte
+  | Type.Int16
+  | Type.Int32
+  | Type.UInt16
+  | Type.UInt32
+  | Type.Double
+  | Type.Single;
+type FixedSizedStringType = Type.Int64 | Type.UInt64;
+type VariableSizedType = Type.ByteArray | Type.String | Type.BitArray;
 
 export class FSUIPC {
   constructor();

@@ -12,7 +12,7 @@ export const cockpit: OffsetList = {
     description: 'nav lights',
     convert: '!!{VAL}',
     type: Type.Byte,
-    permission: 'rw',
+    permission: 'rw'
   }),
   strobeLights: new Offset({
     value: 0x281,
@@ -21,19 +21,19 @@ export const cockpit: OffsetList = {
     description: 'strobe lights',
     convert: '!!{VAL}',
     type: Type.Byte,
-    permission: 'rw',
+    permission: 'rw'
   }),
   landingLights: new Offset({
-    value: 0x28C,
+    value: 0x28c,
     name: 'landingLights',
     category: OffsetCategory.COCKPIT,
     description: 'landing lights',
     convert: '!!{VAL}',
     type: Type.UInt16,
-    permission: 'rw',
+    permission: 'rw'
   }),
   lights: new Offset({
-    value: 0x0D0C,
+    value: 0x0d0c,
     name: 'lights',
     category: OffsetCategory.COCKPIT,
     description: 'all lights - FS2000+',
@@ -41,25 +41,25 @@ export const cockpit: OffsetList = {
     convert: 'lightsMapping',
     mapping: true,
     length: 2,
-    permission: 'rw',
+    permission: 'rw'
   }),
   alternateStaticAirSource: new Offset({
-    value: 0x29B,
+    value: 0x29b,
     name: 'alternateStaticAirSource',
     category: OffsetCategory.COCKPIT,
     description: 'Alternate static air source selected',
     convert: '!!{VAL}',
     type: Type.Byte,
-    permission: 'rw',
+    permission: 'rw'
   }),
   pitotHeat: new Offset({
-    value: 0x29C,
+    value: 0x29c,
     name: 'pitotHeat',
     category: OffsetCategory.COCKPIT,
     description: 'pitot heat active',
     convert: '!!{VAL}',
     type: Type.Int16,
-    permission: 'rw',
+    permission: 'rw'
   }),
   altimeterSettings: new Offset({
     value: 0x330,
@@ -68,7 +68,7 @@ export const cockpit: OffsetList = {
     description: 'altimeters settings - mb',
     convert: '{VAL} / 16',
     type: Type.UInt16,
-    permission: 'rw',
+    permission: 'rw'
   }),
   altimeterSettingsG1000: new Offset({
     value: 0x332,
@@ -77,24 +77,24 @@ export const cockpit: OffsetList = {
     description: 'G1000 altimeters settings - mb',
     convert: '{VAL} / 16',
     type: Type.UInt16,
-    permission: 'rw',
+    permission: 'rw'
   }),
   turnCoordinatorPosition: new Offset({
-    value: 0x36E,
+    value: 0x36e,
     name: 'turnCoordinatorPosition',
     category: OffsetCategory.COCKPIT,
     description: 'Turn coordinator ball position - + to the right, - to the left, 0 balanced',
     type: Type.SByte,
-    permission: 'r',
+    permission: 'r'
   }),
   turnRate: new Offset({
-    value: 0x37C,
+    value: 0x37c,
     name: 'turnRate',
     category: OffsetCategory.COCKPIT,
     description: 'Turn rate needle - minutes (- to the left, + to the right)',
     type: Type.Int16,
     convert: 'Math.round({VAL} / 1024)',
-    permission: 'r',
+    permission: 'r'
   }),
   preciseTurnCoordinatorPosition: new Offset({
     value: 0x380,
@@ -102,7 +102,7 @@ export const cockpit: OffsetList = {
     category: OffsetCategory.COCKPIT,
     description: 'Turn coordinator ball position - + to the right, - to the left, 0 balanced',
     type: Type.Single,
-    permission: 'r',
+    permission: 'r'
   }),
   preciseTurnRate: new Offset({
     value: 0x384,
@@ -110,25 +110,25 @@ export const cockpit: OffsetList = {
     category: OffsetCategory.COCKPIT,
     description: 'Turn rate needle - minutes (- to the left, + to the right)',
     type: Type.Single,
-    permission: 'r',
+    permission: 'r'
   }),
   stallWarning: new Offset({
-    value: 0x36C,
+    value: 0x36c,
     name: 'stallWarning',
     category: OffsetCategory.COCKPIT,
     description: 'stall warning',
     convert: '!!{VAL}',
     type: Type.Byte,
-    permission: 'r',
+    permission: 'r'
   }),
   overspeedWarning: new Offset({
-    value: 0x36D,
+    value: 0x36d,
     name: 'overspeedWarning',
     category: OffsetCategory.COCKPIT,
     description: 'overspeed warning',
     convert: '!!{VAL}',
     type: Type.Byte,
-    permission: 'r',
+    permission: 'r'
   }),
   displayIAS: new Offset({
     value: 0x612,
@@ -136,148 +136,151 @@ export const cockpit: OffsetList = {
     category: OffsetCategory.COCKPIT,
     description: 'display IAS - <= FS2000',
     type: Type.UInt16,
-    permission: 'rw',
+    permission: 'rw'
   }),
   suctionPressure: new Offset({
-    value: 0xB18,
+    value: 0xb18,
     name: 'suctionPressure',
     category: OffsetCategory.COCKPIT,
     description: 'gyro suction - inHg',
     type: Type.Double,
-    permission: 'r',
+    permission: 'r'
   }),
   bleedAirSourceControl: new Offset({
-    value: 0xB50,
+    value: 0xb50,
     name: 'bleedAirSourceControl',
     category: OffsetCategory.COCKPIT,
-    description: '0=Min, 1=auto, 2=Off, 3=APU, 4=Engines - FSX A321: 0=Auto, 1=Shut (off), 2=APU, 3=Engines',
+    description:
+      '0=Min, 1=auto, 2=Off, 3=APU, 4=Engines - FSX A321: 0=Auto, 1=Shut (off), 2=APU, 3=Engines',
     type: Type.Byte,
-    permission: 'rw',
+    permission: 'rw'
   }),
   gyroDrift: new Offset({
-    value: 0xC3E,
+    value: 0xc3e,
     name: 'gyroDrift',
     category: OffsetCategory.COCKPIT,
     description: 'gyro drift - degrees',
     convert: 'Math.round({VAL} * 360 / 65536)',
     type: Type.Int16,
-    permission: 'rw',
+    permission: 'rw'
   }),
   NDScale738A321EFIS: new Offset({
-    value: 0xE00,
+    value: 0xe00,
     name: 'NDScale738A321EFIS',
     category: OffsetCategory.COCKPIT,
-    description: 'Default 738 and A321 EFIS: ND scale: 738: 0=5nm up to 7=640nm - A321: 0=10nm up to 5=320nm',
+    description:
+      'Default 738 and A321 EFIS: ND scale: 738: 0=5nm up to 7=640nm - A321: 0=10nm up to 5=320nm',
     type: Type.UInt16,
-    permission: 'rw',
+    permission: 'rw'
   }),
   NDMode738EFIS: new Offset({
-    value: 0xE02,
+    value: 0xe02,
     name: 'NDMode738EFIS',
     category: OffsetCategory.COCKPIT,
     description: 'Default 738 EFIS: ND mode:0=APP, 1=VOR, 2=MAP',
     type: Type.UInt16,
-    permission: 'rw',
+    permission: 'rw'
   }),
   NDMapItems738A321EFIS: new Offset({
-    value: 0xE04,
+    value: 0xe04,
     name: 'NDMapItems738A321EFIS',
     category: OffsetCategory.COCKPIT,
-    description: 'Default 738 and A321 EFIS: ND map items shown: 738: 0=WPT, 1=APT, 2=NDB, 3=VOR - A321: 0=WPT, 1=VOR, 2=NDB, 3=APT',
+    description:
+      'Default 738 and A321 EFIS: ND map items shown: 738: 0=WPT, 1=APT, 2=NDB, 3=VOR - A321: 0=WPT, 1=VOR, 2=NDB, 3=APT',
     type: Type.UInt16,
-    permission: 'rw',
+    permission: 'rw'
   }),
   NDVORADF1Switch738EFIS: new Offset({
-    value: 0xE06,
+    value: 0xe06,
     name: 'NDVORADF1Switch738EFIS',
     category: OffsetCategory.COCKPIT,
     description: 'Default 738 EFIS: ND VOR/ADF1 switch: 0=VOR, 1=OFF, 2=ADF',
     type: Type.UInt16,
-    permission: 'rw',
+    permission: 'rw'
   }),
   NDVORADF2Switch738EFIS: new Offset({
-    value: 0xE08,
+    value: 0xe08,
     name: 'NDVORADF2Switch738EFIS',
     category: OffsetCategory.COCKPIT,
     description: 'Default 738 EFIS: ND VOR/ADF2 switch: 0=VOR, 1=OFF, 2=ADF',
     type: Type.UInt16,
-    permission: 'rw',
+    permission: 'rw'
   }),
   NDArcCentered738EFIS: new Offset({
-    value: 0xE0A,
+    value: 0xe0a,
     name: 'NDArcCentered738EFIS',
     category: OffsetCategory.COCKPIT,
     description: 'Default 738 EFIS: ND arc=0, centred=1',
     type: Type.UInt16,
-    permission: 'rw',
+    permission: 'rw'
   }),
   autopilotSpeedSwitch738EFIS: new Offset({
-    value: 0xE0C,
+    value: 0xe0c,
     name: 'autopilotSpeedSwitch738EFIS',
     category: OffsetCategory.COCKPIT,
     description: 'Default 738 EFIS: AP speed/mach C/O button (pressed if 1, not pressed if 0). ',
     convert: '!!{VAL}',
     type: Type.UInt16,
-    permission: 'r',
+    permission: 'r'
   }),
   NDModeA321EFIS: new Offset({
-    value: 0xE0E,
+    value: 0xe0e,
     name: 'NDModeA321EFIS',
     category: OffsetCategory.COCKPIT,
     description: 'Default A321 EFIS: ND mode: 0=ILS, 1=VOR, 2=NAV, 3=ARC',
     type: Type.UInt16,
-    permission: 'rw',
+    permission: 'rw'
   }),
   NDVORADF1SwitchA321EFIS: new Offset({
-    value: 0xE10,
+    value: 0xe10,
     name: 'NDVORADF1SwitchA321EFIS',
     category: OffsetCategory.COCKPIT,
     description: 'Default A321 EFIS: ND VOR/ADF1 switch: 0=VOR, 1=OFF, 2=ADF',
     type: Type.UInt16,
-    permission: 'rw',
+    permission: 'rw'
   }),
   NDVORADF2SwitchA321EFIS: new Offset({
-    value: 0xE12,
+    value: 0xe12,
     name: 'NDVORADF2SwitchA321EFIS',
     category: OffsetCategory.COCKPIT,
     description: 'Default A321 EFIS: ND VOR/ADF2 switch: 0=VOR, 1=OFF, 2=ADF',
     type: Type.UInt16,
-    permission: 'rw',
+    permission: 'rw'
   }),
   NDInHghPASwitchA321EFIS: new Offset({
-    value: 0xE14,
+    value: 0xe14,
     name: 'NDInHghPASwitchA321EFIS',
     category: OffsetCategory.COCKPIT,
     description: 'Default A321 EFIS: ND InHg/hPA switch, 0=InHg, 1=hPA',
     type: Type.UInt16,
-    permission: 'rw',
+    permission: 'rw'
   }),
   NDILSSwitchA321EFIS: new Offset({
-    value: 0xE16,
+    value: 0xe16,
     name: 'NDILSSwitchA321EFIS',
     category: OffsetCategory.COCKPIT,
     description: 'Default A321 EFIS: ND ILS mode button, 0 = off, 1=on',
     convert: '!!{VAL}',
     type: Type.UInt16,
-    permission: 'rw',
+    permission: 'rw'
   }),
   autopilotSpeedSwitch321EFIS: new Offset({
-    value: 0xE18,
+    value: 0xe18,
     name: 'autopilotSpeedSwitch321EFIS',
     category: OffsetCategory.COCKPIT,
     description: 'Default 321 EFIS: AP speed/mach C/O button (pressed if 1, not pressed if 0). ',
     convert: '!!{VAL}',
     type: Type.UInt16,
-    permission: 'r',
+    permission: 'r'
   }),
   altitudeChangeRate321EFIS: new Offset({
-    value: 0xE1A,
+    value: 0xe1a,
     name: 'altitudeChangeRate',
     category: OffsetCategory.COCKPIT,
     description: 'Default A321 EFIS: Altitude change rate switch (0 = 100, 1=1000)',
     convert: '{VAL} === 0 ? 100 : 1000',
     type: Type.UInt16,
-    permission: 'r',
+    permission: 'r'
   }),
   fuelFlowAtCruise: new Offset({
     value: 0x1270,
@@ -285,6 +288,6 @@ export const cockpit: OffsetList = {
     category: OffsetCategory.COCKPIT,
     description: 'Estimated fuel flow at cruise - lb/h',
     type: Type.Int32,
-    permission: 'r',
-  }),
+    permission: 'r'
+  })
 };

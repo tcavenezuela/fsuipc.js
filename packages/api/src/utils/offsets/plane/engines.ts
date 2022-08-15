@@ -19,7 +19,7 @@ export const engines: OffsetList = {
     convert: 'engineType',
     mapping: true,
     type: Type.Byte,
-    permission: 'r',
+    permission: 'r'
   }),
   hasMixtureControl: new Offset({
     value: 0x780,
@@ -28,7 +28,7 @@ export const engines: OffsetList = {
     description: 'has mixture control',
     convert: '!!{VAL}',
     type: Type.UInt32,
-    permission: 'r',
+    permission: 'r'
   }),
   hasCarbHeat: new Offset({
     value: 0x784,
@@ -37,7 +37,7 @@ export const engines: OffsetList = {
     description: 'has carb heat',
     convert: '!!{VAL}',
     type: Type.UInt32,
-    permission: 'r',
+    permission: 'r'
   }),
   activeEngine: new Offset({
     value: 0x888,
@@ -46,28 +46,28 @@ export const engines: OffsetList = {
     description: 'active engine pattern',
     type: Type.BitArray,
     length: 1,
-    permission: 'rw',
+    permission: 'rw'
   }),
   enginesCount: new Offset({
-    value: 0xAEC,
+    value: 0xaec,
     name: 'enginesCount',
     category: OffsetCategory.ENGINE,
     description: 'engines count',
     type: Type.Int16,
-    permission: 'r',
+    permission: 'r'
   }),
   throttleLowerLimit: new Offset({
-    value: 0xB00,
+    value: 0xb00,
     name: 'throttleLowerLimit',
     category: OffsetCategory.ENGINE,
     description: 'throttle lower limit - percent - negative = reverse capable',
     convert: 'Math.round({VAL} < 0 ? {VAL} / 4096 * 100 : {VAL} / 16384 * 100)',
     type: Type.Int16,
-    permission: 'r',
+    permission: 'r'
   }),
   ...engine1,
   ...engine2,
   ...engine3,
   ...engine4,
-  ...propeller1,
+  ...propeller1
 };

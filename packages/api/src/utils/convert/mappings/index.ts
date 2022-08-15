@@ -38,7 +38,7 @@ export const MAPPINGS: { [key: string]: (_: any) => any } = {
   // radios,
   vorToFrom,
   navBackCourseFlags,
-  navCapabilities,
+  navCapabilities
 };
 
 export * from './lights';

@@ -22,7 +22,8 @@
     "url": "git+https://github.com/tcavenezuela/fsuipc.js.git"
   },
   "scripts": {
-    "build": "tsc --declaration && yarn post-build",
+    "lint": "eslint \"src/**/*.ts\"",
+    "build": "yarn run lint && tsc --declaration && yarn post-build",
     "post-build": "tsc-alias -p tsconfig.json"
   },
   "bugs": {
