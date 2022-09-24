@@ -1,6 +1,6 @@
 {
   "name": "@fsuipc.js/api",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "description": "",
   "homepage": "https://github.com/tcavenezuela/fsuipc.js/tree/master/packages/api#readme",
   "bugs": {
@@ -36,7 +36,7 @@
     "typescript": "^4.7.4"
   },
   "peerDependencies": {
-    "fsuipc.js": "^1.1.0",
+    "fsuipc.js": "^1.1.1",
     "rxjs": "^7.5.6",
     "vm2": "^3.9.10"
   },

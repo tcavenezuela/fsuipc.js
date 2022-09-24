@@ -1,5 +1,13 @@
 # @fsuipc.js/api
 
+## 1.1.1
+
+### Patch Changes
+
+- cb1da15: Update README files headers.
+- Updated dependencies [cb1da15]
+  - fsuipc.js@1.1.1
+
 ## 1.1.0
 
 ### Minor Changes

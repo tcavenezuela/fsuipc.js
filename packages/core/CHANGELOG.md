@@ -1,5 +1,11 @@
 # fsuipc.js
 
+## 1.1.1
+
+### Patch Changes
+
+- cb1da15: Update README files headers.
+
 ## 1.1.0
 
 ### Minor Changes
