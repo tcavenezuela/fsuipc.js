@@ -2,6 +2,11 @@
   "targets": [
     {
       "target_name": "fsuipc",
+      "cflags!": [ "-fno-exceptions" ],
+      "cflags_cc!": [ "-fno-exceptions" ],
+      "msvs_settings": {
+          "VCCLCompilerTool": { "ExceptionHandling": 1 },
+      },
       "sources": [
         "src/native/index.cc",
         "src/native/FSUIPC.cc",
@@ -9,7 +14,7 @@
       ],
       "include_dirs": [
         "src/native",
-        "<!(node -e \"require('nan')\")"
+        "<!(node -p \"require('node-addon-api').include_dir\")"
       ]
     }
   ]

@@ -1,3 +1,5 @@
+// Type definitions for fsuipc
+
 export const enum Type {
   Byte = 0,
   SByte = 1,
@@ -103,7 +105,9 @@ export enum ErrorCode {
   // Maybe running on WideClient, but FS not running on Server, or wrong FSUIPC
   RUNNING,
   // Read or Write request cannot be added, memory for Process is full
-  SIZE
+  SIZE,
+  // User does not have permission to connect to FSUIPC
+  NOPERMISSION
 }
 
 export class FSUIPCError extends Error {
