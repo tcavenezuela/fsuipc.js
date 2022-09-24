@@ -1,12 +1,4 @@
-<p>
-  <br />
-  <img src="https://user-images.githubusercontent.com/8359234/184555256-5e6458a4-6e4c-489b-b1a6-bfe2e6dcd15a.png" alt="fsuipc.js" width="150"/>
-  <br />
-    <sub><strong>FSUIPC client implementation for NodeJS</strong></sub>
-  <br />
-  <br />
-  </a>
-</p>
+<img src="https://user-images.githubusercontent.com/8359234/184555256-5e6458a4-6e4c-489b-b1a6-bfe2e6dcd15a.png" alt="fsuipc.js" width="150"/> 
 
 [![npm version](https://badge.fury.io/js/fsuipc.js.svg)](https://badge.fury.io/js/fsuipc.js)
 ![ts](https://badgen.net/badge/Built%20With/TypeScript/blue)

@@ -1,3 +1,11 @@
+<img src="https://user-images.githubusercontent.com/8359234/184555256-5e6458a4-6e4c-489b-b1a6-bfe2e6dcd15a.png" alt="fsuipc.js" width="150"/> 
+
+[![npm version](https://badge.fury.io/js/@fsuipc.js%2Fapi.svg)](https://badge.fury.io/js/@fsuipc.js%2Fapi)
+![ts](https://badgen.net/badge/Built%20With/TypeScript/blue)
+[![release](https://github.com/tcavenezuela/fsuipc.js/actions/workflows/release.yml/badge.svg?branch=master)](https://github.com/tcavenezuela/fsuipc.js/actions/workflows/release.yml)
+
+[FSUIPC](http://www.fsuipc.com/) client implementation for NodeJS.
+
 # @fsuipc.js/api
 
 This package allows you to read +800 predefined offsets.
