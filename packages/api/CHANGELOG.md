@@ -1,6 +1,6 @@
 # @fsuipc.js/api
 
-## 2.0.0
+## 1.1.0
 
 ### Minor Changes
 
