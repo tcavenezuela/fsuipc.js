@@ -2,14 +2,18 @@
   "name": "fsuipc.js",
   "version": "1.0.0",
   "description": "",
-  "author": "Carlos Villalobos",
   "homepage": "https://github.com/tcavenezuela/fsuipc.js/tree/master/packages/core#readme",
+  "bugs": {
+    "url": "https://github.com/tcavenezuela/fsuipc.js/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tcavenezuela/fsuipc.js.git"
+  },
   "license": "MIT",
+  "author": "Carlos Villalobos",
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
-  "publishConfig": {
-    "access": "public"
-  },
   "directories": {
     "lib": "lib",
     "src": "src"
@@ -19,29 +23,28 @@
     "src",
     "binding.gyp"
   ],
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/tcavenezuela/fsuipc.js.git"
-  },
   "scripts": {
-    "test": "ts-node src/test.ts",
-    "lint": "eslint \"src/**/*.ts\"",
     "build": "yarn run lint && tsc && yarn run postbuild",
     "postbuild": "copyfiles -u 1 \"src/*.d.ts\" lib",
+    "lint": "eslint \"src/**/*.ts\"",
     "native-build": "node-gyp build",
+    "native-configure": "node-gyp configure",
     "native-install": "node-gyp rebuild",
-    "native-configure": "node-gyp configure"
-  },
-  "bugs": {
-    "url": "https://github.com/tcavenezuela/fsuipc.js/issues"
+    "test": "ts-node src/test.ts"
   },
   "dependencies": {
     "bindings": "^1.5.0",
-    "nan": "^2.16.0"
+    "node-addon-api": "^5.0.0"
   },
   "devDependencies": {
     "copyfiles": "^2.4.1",
     "ts-node": "^10.8.0",
     "typescript": "^4.7.2"
+  },
+  "engines": {
+    "node": ">=16.0"
+  },
+  "publishConfig": {
+    "access": "public"
   }
 }

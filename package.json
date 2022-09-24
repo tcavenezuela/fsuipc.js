@@ -1,16 +1,26 @@
 {
   "name": "fsuipc.js-monorepo",
-  "private": "true",
   "version": "0.0.0",
+  "private": "true",
   "description": "FSUIPC client implementation for NodeJS.",
+  "homepage": "https://github.com/tcavenezuela/fsuipc.js#readme",
+  "bugs": {
+    "url": "https://github.com/tcavenezuela/fsuipc.js/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tcavenezuela/fsuipc.js.git"
+  },
+  "license": "MIT",
+  "author": "Carlos Villalobos <carliyipxd@gmail.com>",
   "workspaces": [
     "packages/*"
   ],
   "scripts": {
-    "changeset": "changeset",
-    "version-packages": "changeset version",
     "build": "lerna run build",
-    "release": "yarn run build && changeset publish"
+    "changeset": "changeset",
+    "release": "yarn run build && changeset publish",
+    "version-packages": "changeset version"
   },
   "devDependencies": {
     "@changesets/cli": "^2.23.1",
@@ -29,15 +39,5 @@
     "prettier": "^2.7.1",
     "tsc-alias": "^1.7.0",
     "typescript": "^4.7.2"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/tcavenezuela/fsuipc.js.git"
-  },
-  "author": "Carlos Villalobos <carliyipxd@gmail.com>",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/tcavenezuela/fsuipc.js/issues"
-  },
-  "homepage": "https://github.com/tcavenezuela/fsuipc.js#readme"
+  }
 }
