@@ -1,5 +1,15 @@
 # fsuipc.js
 
+## 1.1.0
+
+### Minor Changes
+
+- fa4b718: Bump latest fsuipc-node 0.5.0 changes.
+
+### Patch Changes
+
+- 57d8ba7: Sort in right order all package.json files in the repo.
+
 ## 1.0.0
 
 ### Major Changes
