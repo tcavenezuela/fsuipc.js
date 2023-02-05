@@ -1,7 +1,7 @@
 /* eslint-disable @typescript-eslint/no-var-requires */
 
 if (process.platform !== 'win32') {
-  throw new Error('FSUIPC only works on Windows platform');
+  console.warn('Warning: FSUIPC only works on Windows platforms.');
 } else {
   const core = require('bindings')('fsuipc.node');
 
