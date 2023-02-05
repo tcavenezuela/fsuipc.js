@@ -1,5 +1,11 @@
 # fsuipc.js
 
+## 1.1.2
+
+### Patch Changes
+
+- 3acb080: Change throw error to warning to avoid a crash in electron platforms.
+
 ## 1.1.1
 
 ### Patch Changes
