@@ -50,7 +50,7 @@ type FixedSizedNumberType =
   | Type.UInt32
   | Type.Double
   | Type.Single;
-type FixedSizedStringType = Type.Int64 | Type.UInt64;
+type Int64Type = Type.Int64 | Type.UInt64;
 type VariableSizedType = Type.ByteArray | Type.String | Type.BitArray;
 
 export class FSUIPC {
@@ -60,13 +60,14 @@ export class FSUIPC {
   close(): Promise<FSUIPC>;
   process(): Promise<object>;
 
-  add(name: string, offset: number, type: FixedSizedNumberType | FixedSizedStringType): Offset;
+  add(name: string, offset: number, type: FixedSizedNumberType | Int64Type): Offset;
   add(name: string, offset: number, type: VariableSizedType, length: number): Offset;
 
   remove(name: string): Offset;
 
-  write(offset: number, type: FixedSizedNumberType, value: number): void;
-  write(offset: number, type: FixedSizedStringType, value: string): void;
+  write(offset: number, type: FixedSizedNumberType | Int64Type, value: number): void;
+  write(offset: number, type: Int64Type, value: string): void;
+  write(offset: number, type: Int64Type, value: bigint): void;
 
   // Experimental
   write(offset: number, type: Type.String, length: number, value: string): void;
