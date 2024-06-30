@@ -25,7 +25,7 @@ to execute fsuipc.js correctly you must meet the following requirements:
 ### Installation
 
 ```bash
-yarn install fsuipc.js
+yarn add fsuipc.js
 ```
 
 ```js
