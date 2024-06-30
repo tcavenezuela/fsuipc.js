@@ -1,5 +1,16 @@
 # fsuipc.js
 
+## 1.2.0
+
+### Minor Changes
+
+- 6574bab: bump latest changes from fsuipc-node 0.7.2
+
+### Patch Changes
+
+- 21a9bb3: add os validation on binding node file to avoid installation errors on non-windows OS
+- 352ebb6: increment minimum node version to 18+
+
 ## 1.1.2
 
 ### Patch Changes
