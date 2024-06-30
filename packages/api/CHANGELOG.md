@@ -1,5 +1,12 @@
 # @fsuipc.js/api
 
+## 1.1.2-alpha.0
+
+### Patch Changes
+
+- Updated dependencies
+  - fsuipc.js@1.1.3-alpha.0
+
 ## 1.1.1
 
 ### Patch Changes

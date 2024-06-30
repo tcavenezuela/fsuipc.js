@@ -1,0 +1,11 @@
+{
+  "mode": "pre",
+  "tag": "alpha",
+  "initialVersions": {
+    "@fsuipc.js/api": "1.1.1",
+    "fsuipc.js": "1.1.2"
+  },
+  "changesets": [
+    "proud-trains-draw"
+  ]
+}

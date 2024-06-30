@@ -1,5 +1,11 @@
 # fsuipc.js
 
+## 1.1.3-alpha.0
+
+### Patch Changes
+
+- add os validation on binding file to avoid instalation errors on non-windows os
+
 ## 1.1.2
 
 ### Patch Changes
