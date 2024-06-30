@@ -1,5 +1,15 @@
 # @fsuipc.js/api
 
+## 2.0.0
+
+### Patch Changes
+
+- 352ebb6: increment minimum node version to 18+
+- Updated dependencies [21a9bb3]
+- Updated dependencies [6574bab]
+- Updated dependencies [352ebb6]
+  - fsuipc.js@1.2.0
+
 ## 1.1.1
 
 ### Patch Changes
