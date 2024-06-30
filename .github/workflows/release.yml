@@ -1,7 +1,7 @@
 name: Release
 
 env:
-  NODE: 16
+  NODE: 18
 
 on:
   push:
