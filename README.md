@@ -16,7 +16,7 @@
 to execute fsuipc.js correctly you must meet the following requirements:
 
 - Windows 10 64bits
-- Node 16.14.2+
+- Node 18.20.3+
 - [FSUIPC](http://www.fsuipc.com/) installed as flight simulator plugin
 - Install necessary development tools (Python, Visual Studio) [here](https://github.com/nodejs/node-gyp?tab=readme-ov-file#on-windows)
 
