@@ -1,5 +1,11 @@
 # @fsuipc.js/api
 
+## 2.0.1
+
+### Patch Changes
+
+- 94b996e: add param in listen function to enable or disable interval
+
 ## 2.0.0
 
 ### Patch Changes
