@@ -1,5 +1,5 @@
 import { FSUIPC, Simulator, Type, FSUIPCError } from 'fsuipc.js';
-import { timer, from, Observable, throwError } from 'rxjs';
+import { timer, from, Observable, throwError, of } from 'rxjs';
 import { switchMap, catchError, map } from 'rxjs/operators';
 
 // Utils
@@ -41,6 +41,7 @@ export class FsuipcApi {
   }
 
   public listen(
+    useInterval: boolean,
     interval: number,
     offsetList: string[],
     terminateOnError = true
@@ -51,7 +52,9 @@ export class FsuipcApi {
 
     this.watchOffsets(offsetList);
 
-    return timer(interval, interval).pipe(
+    const source$ = useInterval ? timer(interval, interval) : of(null);
+
+    return source$.pipe(
       switchMap(() =>
         from(this.fsuipc.process()).pipe(
           map((result: object) => {
