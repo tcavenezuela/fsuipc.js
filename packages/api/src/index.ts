@@ -13,6 +13,7 @@ export class FsuipcApi {
   private fsuipcGlobalInstance: FSUIPC;
   private fsuipc: FSUIPC;
   private watchedOffsetCache: any[] = [];
+  connected = false;
 
   constructor(private simulator?: Simulator) {}
 
@@ -25,8 +26,11 @@ export class FsuipcApi {
       } else {
         this.fsuipc = await this.fsuipcGlobalInstance.open();
       }
+
+      this.connected = true;
       return true;
     } catch (error) {
+      this.connected = false;
       throw new FSUIPCError(error.message, error.code);
     }
   }
@@ -34,8 +38,11 @@ export class FsuipcApi {
   public async close() {
     try {
       this.fsuipc = await this.fsuipcGlobalInstance.close();
+
+      this.connected = false;
       return true;
     } catch (error) {
+      this.connected = false;
       throw new FSUIPCError(error.message, error.code);
     }
   }
