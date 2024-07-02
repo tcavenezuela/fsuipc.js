@@ -13,7 +13,7 @@ export class FsuipcApi {
   private fsuipcGlobalInstance: FSUIPC;
   private fsuipc: FSUIPC;
   private watchedOffsetCache: any[] = [];
-  connected: boolean;
+  connected = false;
 
   constructor(private simulator?: Simulator) {}
 
