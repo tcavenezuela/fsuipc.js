@@ -18,6 +18,7 @@ import { engines } from './plane/engines';
 import { autopilot } from './plane/autopilot';
 import { failure } from './failure/failure';
 import { electric } from './plane/electric';
+import { simulator } from './misc/simulator';
 
 export const OFFSETS: OffsetList = {
   // Position and Attitude
@@ -48,7 +49,10 @@ export const OFFSETS: OffsetList = {
   ...icing,
   ...engines,
   ...autopilot,
-  ...electric
+  ...electric,
+
+  // Misc
+  ...simulator
 };
 
 export * from './airport/runway';
@@ -68,3 +72,4 @@ export * from './plane/engines';
 export * from './plane/autopilot';
 export * from './simulation/simulation';
 export * from './plane/electric';
+export * from './misc/simulator';
