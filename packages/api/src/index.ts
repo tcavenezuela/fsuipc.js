@@ -47,7 +47,7 @@ export class FsuipcApi {
     terminateOnError = true
   ): Observable<ConvertedOffsetValues> {
     if (!this.fsuipc) {
-      return throwError(() => new Error('NO_FSUIPC_INSTANCE'));
+      return throwError(() => 'NO_FSUIPC_INSTANCE');
     }
 
     this.watchOffsets(offsetList);
@@ -75,7 +75,7 @@ export class FsuipcApi {
               this.fsuipc.close();
             }
 
-            return throwError(() => new Error(JSON.stringify(error)));
+            return throwError(() => JSON.stringify(error));
           })
         )
       )
