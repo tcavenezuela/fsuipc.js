@@ -22,6 +22,24 @@ export const simulator: OffsetList = {
     length: 256,
     permission: 'r'
   }),
+  messageText: new Offset({
+    value: 0x3380,
+    name: 'messageText',
+    category: OffsetCategory.MISC,
+    description:
+      'Write a message as string to show in the simulator. Subject to the maximum of 128 characters',
+    type: Type.String,
+    length: 128,
+    permission: 'rw'
+  }),
+  messageDisplay: new Offset({
+    value: 0x32fa,
+    name: 'messageDisplay',
+    category: OffsetCategory.MISC,
+    description: 'Text display control in seconds.',
+    type: Type.UInt16,
+    permission: 'rw'
+  }),
   /* XPUIPC offsets */
   xplaneFlag: new Offset({
     value: 0x6fff,
