@@ -34,7 +34,7 @@ const simulator = new FsuipcApi(Simulator.FSX);
 simulator
   .init()
   .then(() => {
-    simulator.listen(2000, ['gs', 'altitude', 'comFreq', 'lights']).subscribe((result) => {
+    simulator.listen(true, 2000, ['gs', 'altitude', 'comFreq', 'lights']).subscribe((result) => {
       console.log(JSON.stringify(result));
     });
   })
