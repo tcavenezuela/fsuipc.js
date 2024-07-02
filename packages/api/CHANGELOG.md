@@ -1,5 +1,19 @@
 # @fsuipc.js/api
 
+## 2.0.2
+
+### Patch Changes
+
+- 665c17c: add offset 0x3380: Write a message as string to show in the simulator.
+  add offset 0x32fa: Text display control in seconds.
+- 92defa1: add write method
+- 707dfc1: change throw error to avoid use new Error since we are returning a JSON to improve error parsing
+- 4bce020: add connected status to main class
+- 886ec28: add offset 0x3308: sim version currently in use.
+  add offset 0x3d00: aircraft name currently in use.
+  add exclusive X-Plane offset 0x6fff: flag to indicate if the fsuipc version is currently running in X-Plane (XPUIPC).
+  add exclusive X-Plane offset 0x6f03: XPUIPC version string.
+
 ## 2.0.1
 
 ### Patch Changes
