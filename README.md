@@ -4,7 +4,7 @@
 ![ts](https://badgen.net/badge/Built%20With/TypeScript/blue)
 [![release](https://github.com/tcavenezuela/fsuipc.js/actions/workflows/release.yml/badge.svg?branch=master)](https://github.com/tcavenezuela/fsuipc.js/actions/workflows/release.yml)
 
-[FSUIPC](http://www.fsuipc.com/) client implementation for NodeJS.
+[FSUIPC](http://www.fsuipc.com/) / [XPUIPC](https://www.schiratti.com/xpuipc.html) client implementation for NodeJS.
 
 ## Packages
 
@@ -17,7 +17,7 @@ to execute fsuipc.js correctly you must meet the following requirements:
 
 - Windows 10 64bits
 - Node 18.20.3+
-- [FSUIPC](http://www.fsuipc.com/) installed as flight simulator plugin
+- [FSUIPC](http://www.fsuipc.com/) or [XPUIPC](https://www.schiratti.com/xpuipc.html) installed as flight simulator plugin
 - Install necessary development tools (Python, Visual Studio) [here](https://github.com/nodejs/node-gyp?tab=readme-ov-file#on-windows)
 
 ## Quick start
