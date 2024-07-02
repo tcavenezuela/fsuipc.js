@@ -1,3 +1,5 @@
+/* eslint-disable @typescript-eslint/ban-ts-comment */
+
 import { FSUIPC, Simulator, Type, FSUIPCError } from 'fsuipc.js';
 import { timer, from, Observable, throwError, of } from 'rxjs';
 import { switchMap, catchError, map } from 'rxjs/operators';
@@ -80,6 +82,54 @@ export class FsuipcApi {
         )
       )
     );
+  }
+
+  public async write(
+    offsetList: { offset: string; value: string | number | bigint | ArrayBufferView }[],
+    terminateOnError = true
+  ): Promise<void> {
+    if (!this.fsuipc) {
+      throw new Error('NO_FSUIPC_INSTANCE');
+    }
+
+    for (const offsetData of offsetList) {
+      const offset: Offset = OFFSETS[offsetData.offset];
+
+      if (offset.permission === 'r') {
+        throw new Error(`${offset.name} offset does not allow writing.`);
+      }
+
+      if (offset.type === Type.ByteArray || offset.type === Type.String) {
+        const offsetType = offset.type as Type.ByteArray | Type.String;
+        // @ts-ignore
+        this.fsuipc.write(offset.value, offsetType, offset.length, offsetData.value);
+      } else {
+        const offsetType = offset.type as
+          | Type.Byte
+          | Type.SByte
+          | Type.Int16
+          | Type.Int32
+          | Type.Int64
+          | Type.UInt64
+          | Type.UInt16
+          | Type.UInt32
+          | Type.Double
+          | Type.Single;
+
+        // @ts-ignore
+        this.fsuipc.write(offset.value, offsetType, offsetData.value);
+      }
+    }
+
+    try {
+      await this.fsuipc.process();
+    } catch (error) {
+      if (terminateOnError) {
+        this.fsuipc.close();
+      }
+
+      throw new Error(JSON.stringify(error));
+    }
   }
 
   private watchOffsets(offsetList: string[]): void {
