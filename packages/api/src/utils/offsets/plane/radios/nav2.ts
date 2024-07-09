@@ -38,7 +38,7 @@ export const NAV2: OffsetList = {
     category: OffsetCategory.RADIOS,
     description: 'NAV2 frequency',
     type: Type.UInt16,
-    convert: 'parseInt(`1` + ({VAL}).toString(16))',
+    convert: '100 + parseInt(({VAL}).toString(16))/100',
     permission: 'rw'
   }),
   hasNav2: new Offset({

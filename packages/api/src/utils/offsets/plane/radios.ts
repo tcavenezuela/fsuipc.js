@@ -4,6 +4,11 @@ import { OffsetCategory } from '@shared/offset-category';
 import { OffsetList } from '@shared/offset-list';
 import { Offset } from '@shared/offset';
 
+import { ADF1 } from './radios/adf1';
+import { ADF2 } from './radios/adf2';
+import { NAV1 } from './radios/nav1';
+import { NAV2 } from './radios/nav2';
+
 export const radios: OffsetList = {
   com1Freq: new Offset({
     value: 0x34e,
@@ -87,5 +92,9 @@ export const radios: OffsetList = {
     description: 'outer marker - activated when TRUE',
     type: Type.Int16,
     permission: 'r'
-  })
+  }),
+  ...ADF1,
+  ...ADF2,
+  ...NAV1,
+  ...NAV2
 };
