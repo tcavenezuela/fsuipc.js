@@ -5,13 +5,22 @@ import { OffsetList } from '@shared/offset-list';
 import { Offset } from '@shared/offset';
 
 export const radios: OffsetList = {
-  comFreq: new Offset({
+  com1Freq: new Offset({
     value: 0x34e,
-    name: 'comFreq',
+    name: 'com1Freq',
     category: OffsetCategory.RADIOS,
-    description: 'Com frequency',
+    description: 'Com1 frequency',
     type: Type.UInt16,
-    convert: 'parseInt(`1` + ({VAL}).toString(16))',
+    convert: 'parseInt(`1` + ({VAL}).toString(16))/100',
+    permission: 'rw'
+  }),
+  com2Freq: new Offset({
+    value: 0x3118,
+    name: 'com2Freq',
+    category: OffsetCategory.RADIOS,
+    description: 'Com2 frequency',
+    type: Type.UInt16,
+    convert: 'parseInt(`1` + ({VAL}).toString(16))/100',
     permission: 'rw'
   }),
   transponderFreq: new Offset({
@@ -20,7 +29,7 @@ export const radios: OffsetList = {
     category: OffsetCategory.RADIOS,
     description: 'XPND transponder frequency',
     type: Type.UInt16,
-    convert: 'parseInt(`1` + ({VAL}).toString(16))',
+    convert: 'parseInt(({VAL}).toString(16))',
     permission: 'rw'
   }),
   nav12Select: new Offset({
