@@ -8,6 +8,7 @@ import { ADF1 } from './radios/adf1';
 import { ADF2 } from './radios/adf2';
 import { NAV1 } from './radios/nav1';
 import { NAV2 } from './radios/nav2';
+import { ILS } from './radios/ils';
 
 export const radios: OffsetList = {
   com1Freq: new Offset({
@@ -95,6 +96,7 @@ export const radios: OffsetList = {
   }),
   ...ADF1,
   ...ADF2,
+  ...ILS,
   ...NAV1,
   ...NAV2
 };
