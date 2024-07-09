@@ -1,5 +1,12 @@
 # @fsuipc.js/api
 
+## 2.0.3
+
+### Patch Changes
+
+- f2434dd: add missing radio imports and improve nav1, nav2 convert function
+- 6fe1c7b: add new radio offsets: com1, com2 and improve transponder convert function
+
 ## 2.0.2
 
 ### Patch Changes
