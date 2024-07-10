@@ -117,10 +117,28 @@ export const positionAttitude: OffsetList = {
     value: 0x570,
     name: 'altitude',
     category: OffsetCategory.POSITION_ATTITUDE,
-    description: 'altitude - AGL',
+    description: 'altitude - AMSL',
     type: Type.Int64,
     convert: '+({VAL} * 3.28084 / (65536 * 65536)).toFixed(2)',
     permission: 'rw'
+  }),
+  altitudeAgl: new Offset({
+    value: 0x31e4,
+    name: 'altitudeAgl',
+    category: OffsetCategory.POSITION_ATTITUDE,
+    description: 'altitude - radio',
+    type: Type.Int32,
+    convert: '+({VAL} * 3.28084 / 65536).toFixed(2)',
+    permission: 'rw'
+  }),
+  altitudeCalibrated: new Offset({
+    value: 0x3324,
+    name: 'altitudeCalibrated',
+    category: OffsetCategory.POSITION_ATTITUDE,
+    description: 'altitude - calibrated - ft - from altimeter',
+    type: Type.Int32,
+    convert: '+({VAL}).toFixed(2)',
+    permission: 'r'
   }),
   pitch: new Offset({
     value: 0x578,
@@ -254,6 +272,15 @@ export const positionAttitude: OffsetList = {
     description: 'mach speed',
     convert: '{VAL} / 20480',
     type: Type.UInt16,
+    permission: 'r'
+  }),
+  landingRate: new Offset({
+    value: 0x030c,
+    name: 'landingRate',
+    category: OffsetCategory.POSITION_ATTITUDE,
+    description: 'landing rate - ft/min',
+    convert: '{VAL} * 60 * 3.28084 / 256',
+    type: Type.Int16,
     permission: 'r'
   })
 };
