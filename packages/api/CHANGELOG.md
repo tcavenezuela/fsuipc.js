@@ -1,5 +1,11 @@
 # @fsuipc.js/api
 
+## 2.0.4
+
+### Patch Changes
+
+- 600964a: add plane related offsets (altitude AMSL, atltitude AGL, indicated altitude, landing rate)
+
 ## 2.0.3
 
 ### Patch Changes
