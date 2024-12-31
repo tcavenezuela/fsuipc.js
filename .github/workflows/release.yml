@@ -29,10 +29,6 @@ jobs:
       - name: Install Dependencies
         run: yarn install --ignore-scripts # --ignore-scripts to avoid unwanted crashes during dependency installation.
 
-      - name: Build Prebuilt Binaries
-        working-directory: packages/core
-        run: yarn prebuildify --napi # Runs the prebuild step to prepare binaries.
-
       - name: Create Release Pull Request or Publish to npm
         id: changesets
         uses: changesets/action@v1
