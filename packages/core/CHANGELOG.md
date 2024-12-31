@@ -1,5 +1,11 @@
 # fsuipc.js
 
+## 1.2.2
+
+### Patch Changes
+
+- fd1cb64: add prepublish command at build time to include prebuilds binaries
+
 ## 1.2.1
 
 ### Patch Changes
