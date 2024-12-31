@@ -1,5 +1,12 @@
 # fsuipc.js
 
+## 1.2.1
+
+### Patch Changes
+
+- 4bf4b6a: Update CI to include prebuilded binaries
+- 7f4e11c: Bump bump latest changes from fsuipc-node 0.7.3
+
 ## 1.2.0
 
 ### Minor Changes
