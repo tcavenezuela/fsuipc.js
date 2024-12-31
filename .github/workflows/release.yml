@@ -39,5 +39,7 @@ jobs:
           commit: 'chore: release packages'
           title: 'chore: release packages'
         env:
+          # See https://github.com/changesets/action/issues/147
+          HOME: ${{ github.workspace }}
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
