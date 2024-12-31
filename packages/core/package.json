@@ -26,7 +26,7 @@
     "prebuilds"
   ],
   "scripts": {
-    "build": "yarn run lint && tsc && yarn run postbuild",
+    "build": "yarn run lint && tsc && yarn run prepublish && yarn run postbuild",
     "postbuild": "copyfiles -u 1 \"src/*.d.ts\" lib",
     "lint": "eslint \"src/**/*.ts\"",
     "native-build": "node-gyp build",
