@@ -21,7 +21,9 @@
   "files": [
     "lib",
     "src",
-    "binding.gyp"
+    "binding.gyp",
+    "README.md",
+    "prebuilds"
   ],
   "scripts": {
     "build": "yarn run lint && tsc && yarn run postbuild",
@@ -30,11 +32,13 @@
     "native-build": "node-gyp build",
     "native-configure": "node-gyp configure",
     "native-install": "node-gyp rebuild",
-    "test": "ts-node src/test.ts"
+    "test": "ts-node src/test.ts",
+    "prepublish": "prebuildify --napi"
   },
   "dependencies": {
     "bindings": "^1.5.0",
-    "node-addon-api": "^7.0.0"
+    "node-addon-api": "^8.0.0",
+    "node-gyp-build": "^4.5.0"
   },
   "devDependencies": {
     "copyfiles": "^2.4.1",
